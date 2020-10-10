@@ -15,7 +15,22 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :movies
-  resources :users
+
+  #scope module: 'users' do
+  #  resouces :signin, signup, forgot, send_code
+  #end
+  resources :users do
+    collection do
+      match 'signin', to: 'users#signin_show', via: [:get]
+      match 'signin', to: 'users#signin', via: [:post]
+      match 'signup', to: 'users#signup_show', via: [:get]
+      match 'signup', to: 'users#new', via: [:post]
+      match 'forgot', to: 'users#forgot_show', via: [:get]
+      match 'forgot', to: 'users#forgot', via: [:post]
+      match 'send_code', to: 'users#send_code', via: [:get]
+    end
+  end
+
   
   # Example resource route with options:
   #   resources :products do
