@@ -5,6 +5,7 @@ The commands are for Mac OS. For Ubuntu, you just need to change `brew install` 
 ```
 brew install ruby-dev libssl-dev libpq-dev
 brew install postgresql
+bundle install --without production
 ```
 
 ## Setup postgresql
