@@ -1,26 +1,29 @@
-# Cloug9/Linux
+# Cloud9/Linux
 
-
+## Update postgre configuration
+ Go to the path: `config/database.yml`
+ Please change the username as `ec2-user` (line7)
 
 ## Install Dependencies
-The commands are for Mac OS. For Ubuntu, you just need to change `brew install` to `sudo apt-get install`.
+
 ```
-brew install ruby-dev libssl-dev libpq-dev
-brew install postgresql
+sudo yum install postgresql-devel
+sudo yum install postgresql-server
+sudo service postgresql initdb
+sudo service postgresql start
 bundle install --without production
+
 ```
 
 ## Setup postgresql
 ```
-brew services start postgresql
-createuser -P -d 
+sudo service postgresql start
+createuser -P -d ec2-user
 [set password: rikka]
 bundle exec rake db:create
 ```
 
 ## Start rikka
 ```
-rails server -b 0.0.0.0
+rails s -p $PORT -b $IP
 ```
-
-Then you may access the application on http://localhost:3000.
