@@ -2,6 +2,7 @@
 
 ## Update postgre configuration
  Go to the path: `config/database.yml`
+ 
  Please change the username as `ec2-user` (line7)
 
 ## Install Dependencies
