@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :movies
+  #resources :movies
 
   #scope module: 'users' do
   #  resouces :signin, signup, forgot, send_code
