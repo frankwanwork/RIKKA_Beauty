@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   private 
   def user_params
-     params.require(:user).permit(:email, :username, :password, :type, :lastname, :firstname, :phone)
+     params.require(:user).permit(:email, :username, :password, :type, :last_name, :first_name, :phone_number)
   end
 
   def show
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username], password: params[:password])
     
     if @user
-      session[:user_name] = @user.username
+      session[:username] = @user.username
       flash[:notice] = ' user#{@user.username} logins in successfully!'
       # also did not redirect to the different page according to the user type
       redirect_to root1_path # haven't created yet
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 
   def signup
     # sign up
-    if params[:magicCode] == "rikka"
+    if params[:security_code] == "rikka"
       params[:type] = 1
     else
       params[:type] = 0
