@@ -72,3 +72,4 @@ class UsersController < ApplicationController
   def send_code
     # send verfication code to the email
   end
+end
