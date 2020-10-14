@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'users/send_code'
+
+  get 'users/signin'
+
+  get 'users/signup'
+
+  get 'users/signin_show'
+
+  get 'users/signup_show'
+
+  get 'users/forgot'
+
+  get 'users/forgot_show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,7 +28,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  #resources :movies
+  resources :movies
 
   #scope module: 'users' do
   #  resouces :signin, signup, forgot, send_code

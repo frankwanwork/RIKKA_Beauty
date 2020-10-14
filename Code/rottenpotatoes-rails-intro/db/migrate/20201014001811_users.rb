@@ -4,7 +4,7 @@ class Users < ActiveRecord::Migration
       t.string :email
       t.string :username
       t.string :password
-      t.integer :type
+      t.integer :user_type
       t.string :lastname
       t.string :firstname
       t.string :phone
