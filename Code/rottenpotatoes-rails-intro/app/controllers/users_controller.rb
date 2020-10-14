@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       # also did not redirect to the different page according to the user type
       redirect_to root1_path # haven't created yet
     else
-      flash[:notice] = ' the username or password is not correct'
+      flash[:notice] = ' the username or password222222 is not correct'
       redirect_to signin_users_path
     end
   end
@@ -49,7 +49,9 @@ class UsersController < ApplicationController
     
     @user = User.create!(new_user)
     flash[:notice] = "#{@user.username} was successfully created."
-    redirect_to action: "signin" 
+    redirect_to signin_users_path # "sign in does not work"
+    
+    
   end
 
   def forgot_show
