@@ -1,2 +1,35 @@
-<h1>Users#signin_show</h1>
-<p>Find me in app/views/users/signin_show.html.erb</p>
+<h1>Welcome to RIKKA BEAUTY</h1>
+<h2>Please Log In Here</h2>
+
+<%= form_for :user, url: signin_users_path do |f| %>
+  <p>
+    <%= f.label :Username %><br>
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :Password %><br>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.submit "Log In"%>
+  </p>
+  
+  <!--<% @users.each do |user| %>-->
+  <!--  <tr>-->
+  <!--    <p> Name </p>-->
+  <!--    <td><%= user.username %></td>-->
+  <!--    <p> Password </p>-->
+  <!--    <td><%= user.password %></td>-->
+  <!--  </tr>-->
+  <!--<% end %>  -->
+  
+  
+  
+  <!--<%= link_to '<button type="button">Log In</button>'.html_safe, "Users#show" %>-->
+
+<% end %>
+
+
+<%= link_to 'SignUp', signup_users_path %>
+
+<%= link_to 'Forgot', forgot_users_path %>
