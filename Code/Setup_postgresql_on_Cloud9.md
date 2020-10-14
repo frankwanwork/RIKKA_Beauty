@@ -22,6 +22,7 @@ sudo service postgresql start
 createuser -P -d ec2-user
 [set password: rikka]
 bundle exec rake db:create
+rake db:migrate
 ```
 
 ## Start rikka
