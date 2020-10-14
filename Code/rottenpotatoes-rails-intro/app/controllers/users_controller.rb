@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     
     if @user
       session[:user_name] = @user.username
-      flash[:notice] = ' user#{@user.username} logins in successfully!'
+      flash[:notice] = "#{@user.username} logins in successfully!"
       # also did not redirect to the different page according to the user type
       redirect_to user_path(:id => @user.id) # haven't created yet
     else
