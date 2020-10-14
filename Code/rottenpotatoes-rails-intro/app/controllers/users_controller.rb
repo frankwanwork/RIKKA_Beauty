@@ -40,20 +40,21 @@ class UsersController < ApplicationController
 
   def signup
     # sign up
-    if params[:magicCode] == "rikka"
-      params[:type] = 1
+    new_user = user_params.except(:security_code)
+    if params[:security_code] == "rikka"
+      new_user[:user_type] = 1
     else
-      params[:type] = 0
+      new_user[:user_type] = 0
     end
     
-    @user = User.create!(user_params)
+    @user = User.create!(new_user)
     flash[:notice] = "#{@user.username} was successfully created."
-    redirect_to signin_users_path
+    redirect_to action: "signin" 
   end
 
   def forgot_show
     # forgot password homepage
-    @users = User.all
+    # @users = User.all
   end
 
   def forgot
@@ -70,6 +71,6 @@ class UsersController < ApplicationController
   
   private 
   def user_params
-     params.require(:user).permit(:email, :username, :password, :type, :lastname, :firstname, :phone)
+     params.require(:user).permit(:email, :username, :password, :security_code, :lastname, :firstname, :phone)
   end
 end
