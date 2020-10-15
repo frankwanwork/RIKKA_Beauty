@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
 
+
   def show
     #id = params[:id] # retrieve movie ID from URI route
     #@movie = Movie.find(id) # look up movie by unique ID
@@ -23,8 +24,10 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params.require(:user)[:username], password: params.require(:user)[:password])
     
     if @user
-      session[:user_name] = @user.username
-      flash[:notice] = "#{@user.username} logins in successfully!"
+
+      session[:username] = @user.username
+      flash[:notice] = ' user#{@user.username} logins in successfully!'
+
       # also did not redirect to the different page according to the user type
       redirect_to user_path(:id => @user.id) # haven't created yet
     else
@@ -50,8 +53,6 @@ class UsersController < ApplicationController
     @user = User.create!(new_user)
     flash[:notice] = "#{@user.username} was successfully created."
     redirect_to signin_users_path # "sign in does not work"
-    
-    
   end
 
   def forgot_show
@@ -75,4 +76,5 @@ class UsersController < ApplicationController
   def user_params
      params.require(:user).permit(:email, :username, :password, :security_code, :lastname, :firstname, :phone)
   end
+
 end
