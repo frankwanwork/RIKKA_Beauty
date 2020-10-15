@@ -16,15 +16,6 @@ ActiveRecord::Schema.define(version: 20201015190945) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "movies", force: :cascade do |t|
-    t.string   "title"
-    t.string   "rating"
-    t.text     "description"
-    t.datetime "release_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "resetpwd", force: :cascade do |t|
     t.string   "email"
     t.string   "reset_token"
