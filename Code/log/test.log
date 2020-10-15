@@ -1,0 +1,18 @@
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (106.9ms)[0m  [1mDROP DATABASE IF EXISTS "myapp_test"[0m
+  [1m[35m (361.1ms)[0m  CREATE DATABASE "myapp_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.2ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "rating" character varying, "description" text, "release_date" timestamp, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "resetpwd" ("id" serial primary key, "email" character varying, "reset_token" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.7ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying, "username" character varying, "password" character varying, "user_type" integer, "lastname" character varying, "firstname" character varying, "phone" character varying) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201015190945')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20201014001811')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
