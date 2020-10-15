@@ -62,14 +62,22 @@ class UsersController < ApplicationController
 
   def forgot
     # forgot password
-    @user = User.find params[:username]
-    @user.update_attributes!(user_params[:password])
-    flash[:notice] = "#{@user.username} was successfully updated."
-    redirect_to signin_users_path
+    redirect_to send_code_users_path
   end
 
   def send_code
     # send verfication code to the email
+    @user = User.find params[:email]
+    if @user # if the email exists
+      # 1), trigger send_password_reset_email
+      @user.send_password_reset_email
+       #1.1): if sent is successful
+      flash[:info] = "Email sent with password reset instructions" 
+      redirect_to signin_users_path
+    else
+      flash.now[:danger] = "Email address not found. Please register first!"
+      redirect_to signup_users_path
+    end
   end
   
   private 
