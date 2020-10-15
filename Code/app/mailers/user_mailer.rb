@@ -22,7 +22,9 @@ class UserMailer < ApplicationMailer
     @code = rand() * 1000000
     @code = @code.floor
     @user = user
-    mail to: user.email, subject: "reset password"
-    return @code
+    
+    ResetPwd.create(:email => @user.email, :reset_token => @code)
+    
+    @msg = mail to: user.email, subject: "reset password"
   end
 end
