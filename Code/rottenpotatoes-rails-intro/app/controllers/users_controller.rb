@@ -59,12 +59,14 @@ class UsersController < ApplicationController
 
   def forgot
     # forgot password
+    # verify the email and verification code pair in (global varibale or database)
+    # update password
+    # redirect to signin_show
     redirect_to send_code_users_path
   end
 
   def send_code
     # send verfication code to the email
-#    @user = User.find email: params[:email]
     @user = User.where("email = ?", params[:email]).first
    
     if @user # if the email exists
@@ -73,7 +75,7 @@ class UsersController < ApplicationController
       UserMailer.password_reset(@user).deliver_now
  #1.1): if sent is successful
       flash[:info] = "Email sent with password reset instructions" 
-      redirect_to signin_users_path
+      # redirect_to signin_users_path
     else
       flash.now[:danger] = "Email address not found. Please register first!"
       redirect_to signup_users_path
