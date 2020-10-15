@@ -28,8 +28,8 @@ class UsersController < ApplicationController
       # also did not redirect to the different page according to the user type
       redirect_to user_path(:id => @user.id) # haven't created yet
     else
-      flash[:notice] = ' the username or password222222 is not correct'
-      redirect_to signin_users_path
+      flash[:notice] = ' the username or password is not correct'
+      #redirect_to signin_users_path
     end
   end
 
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   def forgot
     # forgot password
     # verify the email and verification code pair in (global varibale or database)
-    @token = ResetPwd.find_by(password: params[:email])
+    @token = ResetPwd.find_by(email: params[:email])
     if params.require(:user)[:verification] == @token
       User.update_attributes!(params.require(:user).permit(:email, :new_password))
     end
