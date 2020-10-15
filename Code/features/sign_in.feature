@@ -1,4 +1,4 @@
-Feature: allow the user sign in with correct user name and password
+Feature: allow the user sign in with correct username and password
  
   As a valid user
   So that I can sign in and manage the website
@@ -10,21 +10,26 @@ Background: an existing user with username "ec2-user" and password "rikka"
   | username                | password |
   | ec2-user                | rikka    |
   
-
   And  I am on the Rikka home page
-  Then 10 seed movies should exist
 
 Scenario: sign in with the correct username and password
-  When I check the following ratings: PG, R
-  # enter step(s) to ensure that PG and R movies are visible
-#   Then I should see "The Terminator"
-#   And I should see "When Harry Met Sally"
-#   And I should see "Amelie"
-#   And I should see "The Incredibles"
-#   And I should see "Raiders of the Lost Ark"
-#   # enter step(s) to ensure that other movies are not visible
-#   And I should not see "Aladdin"
-#   And I should not see "The Help"
-#   And I should not see "Chocolat"
-#   And I should not see "2001: A Space Odyssey"
-#   And I should not see "Chicken Run"
+  When I am on the Rikka home page
+  And I fill in "username" with "ec2-user"
+  And I fill in "password" with "rikka"
+  And I press "Log In"
+  Then I should not be on the Rikka home page
+  
+  
+Scenario: sign in with the wrong username
+  When I am on the Rikka home page
+  And I fill in "username" with "ec2-use"
+  And I fill in "password" with "rikka"
+  And I press "Log In"
+  Then I should be on the Rikka home page
+  
+Scenario: sign in with the wrong password
+  When I am on the Rikka home page
+  And I fill in "username" with "ec2-use"
+  And I fill in "password" with "rikk"
+  And I press "Log In"
+  Then I should be on the Rikka home page

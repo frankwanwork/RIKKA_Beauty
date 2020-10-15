@@ -16,3 +16,1046 @@
   [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:26:09 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 326ms (Views: 318.3ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:26:09 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:29:53 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 196ms (Views: 187.5ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:29:53 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:31:05 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 198ms (Views: 190.5ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:31:05 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:32:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 200ms (Views: 191.8ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:32:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:33:18 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 197ms (Views: 189.4ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:33:18 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:33:18 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:33:18 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:33:18 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:33:18 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:34:12 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 201ms (Views: 193.5ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:34:12 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:34:12 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/8
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+Started GET "/users/8" for 127.0.0.1 at 2020-10-15 21:34:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:34:12 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:34:12 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:34:12 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:34:12 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:36 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 197ms (Views: 189.6ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/11
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/users/11" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:35:37 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 211ms (Views: 202.9ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/14
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/users/14" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:29 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:57 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 209ms (Views: 201.2ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/17
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/users/17" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:38:58 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 198ms (Views: 190.1ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/20
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/users/20" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:39:40 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 207ms (Views: 199.1ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/23
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/users/23" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:42:50 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 200ms (Views: 192.2ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/26
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+Started GET "/users/26" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"26"}
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:43:46 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:45:28 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 209ms (Views: 202.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:45:28 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:46:35 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 207ms (Views: 199.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:46:35 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:03 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 199ms (Views: 191.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:03 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:03 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:47:03 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:16 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 200ms (Views: 192.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:16 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:16 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:47:16 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:55 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 208ms (Views: 200.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:55 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:55 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:47:55 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:55 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:55 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-15 21:47:55 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:47:55 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 196ms (Views: 187.5ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/40
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/users/40" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"40"}
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-15 21:48:08 +0000
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
