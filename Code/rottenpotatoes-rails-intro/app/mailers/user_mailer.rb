@@ -19,9 +19,6 @@ class UserMailer < ApplicationMailer
   def password_reset(user)
     @greeting = "Hi"
     # add user
-    puts "pp"
-    puts user.username
-    puts user.email
     mail to: user.email, subject: "to@example.org"
   end
 end
