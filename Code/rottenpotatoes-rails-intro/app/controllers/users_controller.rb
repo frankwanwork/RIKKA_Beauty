@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-
-
-
   def show
     #id = params[:id] # retrieve movie ID from URI route
     #@movie = Movie.find(id) # look up movie by unique ID
@@ -67,11 +64,14 @@ class UsersController < ApplicationController
 
   def send_code
     # send verfication code to the email
-    @user = User.find params[:email]
+#    @user = User.find email: params[:email]
+    @user = User.where("email = ?", params[:email]).first
+   
     if @user # if the email exists
       # 1), trigger send_password_reset_email
-      @user.send_password_reset_email
-       #1.1): if sent is successful
+      # @user.send_password_reset_email
+      UserMailer.password_reset(@user).deliver_now
+ #1.1): if sent is successful
       flash[:info] = "Email sent with password reset instructions" 
       redirect_to signin_users_path
     else
