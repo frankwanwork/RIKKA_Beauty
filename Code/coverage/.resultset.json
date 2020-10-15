@@ -1,0 +1,190 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/models/user.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          10,
+          null,
+          null,
+          1,
+          null,
+          3,
+          null,
+          3,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          null,
+          4,
+          null,
+          null,
+          1,
+          null,
+          2,
+          2,
+          0,
+          null,
+          2,
+          null,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/mailers/user_mailer.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/models/resetpwd.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1602799856
+  }
+}
