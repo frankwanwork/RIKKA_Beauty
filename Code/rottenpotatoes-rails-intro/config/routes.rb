@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'movies#index'
+  root 'users#signin'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  #resources :movies
+  resources :movies
 
   #scope module: 'users' do
   #  resouces :signin, signup, forgot, send_code
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
       match 'signin', to: 'users#signin_show', via: [:get]
       match 'signin', to: 'users#signin', via: [:post]
       match 'signup', to: 'users#signup_show', via: [:get]
-      match 'signup', to: 'users#new', via: [:post]
+      match 'signup', to: 'users#signup', via: [:post] ## new -> signup (xz)
       match 'forgot', to: 'users#forgot_show', via: [:get]
       match 'forgot', to: 'users#forgot', via: [:post]
       match 'send_code', to: 'users#send_code', via: [:get]

@@ -1,12 +1,6 @@
 class UsersController < ApplicationController
 
-<<<<<<< HEAD
-  private 
-  def user_params
-     params.require(:user).permit(:email, :username, :password, :type, :last_name, :first_name, :phone_number)
-  end
-=======
->>>>>>> 11e38d5191021fd231317dd1e03f3847ff95bc1f
+
 
   def show
     #id = params[:id] # retrieve movie ID from URI route
@@ -22,18 +16,20 @@ class UsersController < ApplicationController
 
   def signin_show
     # signin homepage
-    #@movies = Movie.all
+    @users= User.all
   end
 
   def signin
     # sign in
-    @user = User.find_by(username: params[:username], password: params[:password])
+    @user = User.find_by(username: params.require(:user)[:username], password: params.require(:user)[:password])
     
     if @user
+
       session[:username] = @user.username
       flash[:notice] = ' user#{@user.username} logins in successfully!'
+
       # also did not redirect to the different page according to the user type
-      redirect_to root1_path # haven't created yet
+      redirect_to user_path(:id => @user.id) # haven't created yet
     else
       flash[:notice] = ' the username or password is not correct'
       redirect_to signin_users_path
@@ -42,26 +38,26 @@ class UsersController < ApplicationController
 
   def signup_show
     # signup homepage
-    @movies = Movie.all
-    
+    @users= User.all
   end
 
   def signup
     # sign up
+    new_user = user_params.except(:security_code)
     if params[:security_code] == "rikka"
-      params[:type] = 1
+      new_user[:user_type] = 1
     else
-      params[:type] = 0
+      new_user[:user_type] = 0
     end
     
-    @user = User.create!(user_params)
+    @user = User.create!(new_user)
     flash[:notice] = "#{@user.username} was successfully created."
-    redirect_to signin_users_path
+    redirect_to signin_users_path # "sign in does not work"
   end
 
   def forgot_show
     # forgot password homepage
-    @movies = Movie.all
+    # @users = User.all
   end
 
   def forgot
@@ -78,6 +74,7 @@ class UsersController < ApplicationController
   
   private 
   def user_params
-     params.require(:user).permit(:email, :username, :password, :type, :lastname, :firstname, :phone)
+     params.require(:user).permit(:email, :username, :password, :security_code, :lastname, :firstname, :phone)
   end
+
 end

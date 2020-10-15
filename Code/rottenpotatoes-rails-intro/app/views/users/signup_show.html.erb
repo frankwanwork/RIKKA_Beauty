@@ -1,0 +1,46 @@
+<h1>Welcome to RIKKA BEAUTY</h1>
+<h2>Sign Up</h2>
+
+<%= form_for:user, url: signup_users_path do |f| %>
+  <p>
+    <%= f.label :First_Name %><br>
+    <%= f.text_field :firstname %>
+  </p>
+  <p>
+    <%= f.label :Last_Name %><br>
+    <%= f.text_field :lastname %>
+  </p>
+  <p>
+    <%= f.label :Username %><br>
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :Email %><br>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :Phone_Number %><br>
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :Password %><br>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :Confirm_Password %><br>
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.label :Admin_Verification %><br>
+    <%= f.text_field :security_code %>
+  </p>
+  <p>
+    <%= f.submit "Sign Up"%>
+  </p>
+  <!--<%= link_to '<button type="button">Sign Up</button>'.html_safe, signin_users_path %>-->
+  
+<% end %>
+
+
+
+<%= link_to 'Back', signin_users_path %>
