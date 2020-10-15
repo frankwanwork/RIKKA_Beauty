@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
 
+<<<<<<< HEAD
   private 
   def user_params
      params.require(:user).permit(:email, :username, :password, :type, :last_name, :first_name, :phone_number)
   end
+=======
+>>>>>>> 11e38d5191021fd231317dd1e03f3847ff95bc1f
 
   def show
     #id = params[:id] # retrieve movie ID from URI route
@@ -72,3 +75,9 @@ class UsersController < ApplicationController
   def send_code
     # send verfication code to the email
   end
+  
+  private 
+  def user_params
+     params.require(:user).permit(:email, :username, :password, :type, :lastname, :firstname, :phone)
+  end
+end
