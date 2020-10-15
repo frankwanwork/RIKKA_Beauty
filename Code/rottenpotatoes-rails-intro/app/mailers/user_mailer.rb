@@ -19,6 +19,10 @@ class UserMailer < ApplicationMailer
   def password_reset(user)
     # return success/fail
     # add code and email pair to somewhere (global variable or database)
-    return  mail to: user.email, subject: "reset password"
+    @code = rand() * 1000000
+    @code = @code.floor
+    @user = user
+    mail to: user.email, subject: "reset password"
+    return @code
   end
 end
