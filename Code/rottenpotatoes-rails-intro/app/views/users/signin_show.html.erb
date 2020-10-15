@@ -4,7 +4,7 @@
 <%= form_for :user, url: signin_users_path do |f| %>
   <p>
     <%= f.label :Username %><br>
-    <%= f.text_field :username %>
+    <%= f.text_field :username, class: 'form-control',id:"username" %>
   </p>
   <p>
     <%= f.label :Password %><br>
