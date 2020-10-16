@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def new
     # create user instance
     # Note: should check the security code
-    @user = User.new
+    # @user = User.new
   end
 
   def signin_show
