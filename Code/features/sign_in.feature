@@ -18,6 +18,7 @@ Scenario: sign in with the correct username and password
   And I fill in "password" with "rikka"
   And I press "Log In"
   Then I should not be on the Rikka home page
+  And I should see "logins in successfully"
   
   
 Scenario: sign in with the wrong username
@@ -26,6 +27,7 @@ Scenario: sign in with the wrong username
   And I fill in "password" with "rikka"
   And I press "Log In"
   Then I should be on the Rikka home page
+  And I should see "the username or password is not correct"
   
 Scenario: sign in with the wrong password
   When I am on the Rikka home page
@@ -33,3 +35,4 @@ Scenario: sign in with the wrong password
   And I fill in "password" with "rikk"
   And I press "Log In"
   Then I should be on the Rikka home page
+  And I should see "the username or password is not correct"

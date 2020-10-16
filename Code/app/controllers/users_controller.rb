@@ -66,33 +66,33 @@ class UsersController < ApplicationController
   def forgot
     # forgot password
     # verify the email and verification code pair in (global varibale or database)
-    @token = ResetPwd.find_by(email: params[:email])
-    if params.require(:user)[:verification] == @token
-      User.update_attributes!(params.require(:user).permit(:email, :new_password))
-    end
-    # update password
-    redirect to signin_show
+    # @token = ResetPwd.find_by(email: params[:email])
+    # if params.require(:user)[:verification] == @token
+    #   User.update_attributes!(params.require(:user).permit(:email, :new_password))
+    # end
+    # # update password
+    # redirect to signin_show
   end
 
   def send_code
-    # send verfication code to the email
-    @user = User.where("email = ?", params[:email]).first
+    # # send verfication code to the email
+    # @user = User.where("email = ?", params[:email]).first
    
-    if @user # if the email exists
-      # 1), trigger send_password_reset_email
-      # @user.send_password_reset_email
-      msg, code = UserMailer.password_reset(@user)
-      msg.deliver_now
-      if msg.nil?
-        flash[:info] = "Error when sending email"
-      else 
-      	flash[:info] = "Email sent with password reset instructions" 
-      end
-      # redirect_to signin_users_path
-    else
-      flash.now[:danger] = "Email address not found. Please register first!"
-      redirect_to signup_users_path
-    end
+    # if @user # if the email exists
+    #   # 1), trigger send_password_reset_email
+    #   # @user.send_password_reset_email
+    #   msg, code = UserMailer.password_reset(@user)
+    #   msg.deliver_now
+    #   if msg.nil?
+    #     flash[:info] = "Error when sending email"
+    #   else 
+    #   	flash[:info] = "Email sent with password reset instructions" 
+    #   end
+    #   # redirect_to signin_users_path
+    # else
+    #   flash.now[:danger] = "Email address not found. Please register first!"
+    #   redirect_to signup_users_path
+    # end
   end
   
   private 

@@ -8085,3 +8085,90 @@ Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.
 Processing by UsersController#signup_show as HTML
   Rendered users/signup_show.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-16 00:16:25 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 249ms (Views: 238.0ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-16 00:16:30 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7tX6es2txHDtnC/BGVcBHU5T2rq9ODvtQY2ESoSKLOebsxQ8Wi/spE9DqR1zo1QVgbfv77kbYYUs8JSGu2uQhQ==", "user"=>{"username"=>"ec2-user", "password"=>"aaa"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "aaa"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 165.91.12.249 at 2020-10-16 00:16:30 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-16 00:16:46 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7tX6es2txHDtnC/BGVcBHU5T2rq9ODvtQY2ESoSKLOebsxQ8Wi/spE9DqR1zo1QVgbfv77kbYYUs8JSGu2uQhQ==", "user"=>{"username"=>"ec2-user", "password"=>"ce"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "ce"]]
+  Rendered users/signin.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-16 01:19:19 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 442ms (Views: 427.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-16 01:19:24 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AQNNcjwIhq4Izms19Ykvb9Fma/Sknw/KmnJKsK5xi4t0ZaM0q4queqoR7emffXpnHoJeoaC8VaL3D1p8kZA36Q==", "user"=>{"username"=>"ec2-user", "password"=>"aaa"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "aaa"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/1
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 165.91.12.249 at 2020-10-16 01:19:24 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
