@@ -30,18 +30,18 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  describe "GET #forgot" do
-    it "returns http success" do
-      get :forgot
-      expect(response).to have_http_status(:success)
-    end
-  end
+  # describe "GET #forgot" do
+  #   it "returns http success" do
+  #     get :forgot
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
 
-  describe "GET #forgot_show" do
-    it "returns http success" do
-      get :forgot_show
-      expect(response).to have_http_status(:success)
-    end
-  end
+  # describe "GET #forgot_show" do
+  #   it "returns http success" do
+  #     get :forgot_show
+  #     expect(response).to have_http_status(:success)
+  #   end
+  # end
 
 end

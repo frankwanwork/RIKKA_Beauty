@@ -7,8 +7,8 @@ Feature: allow the user sign in with correct username and password
 Background: an existing user with username "ec2-user" and password "rikka"
 
   Given the following users exist:
-  | username                | password |
-  | ec2-user                | rikka    |
+  | username                | password |  email              |
+  | ec2-user                | rikka    |  email_0_@gamil.com |
   
   And  I am on the Rikka home page
 
