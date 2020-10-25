@@ -46,14 +46,15 @@ class UsersController < ApplicationController
     else
       new_user[:user_type] = 0
     end
-    
-    begin
+    begin 
     @user = User.create!(new_user)
-    rescue StandardError 
+    
+    rescue StandardError => e
       flash[:warning] = "Email or Username already exists!"
+      puts e.message
       return
     end
-
+    
     flash[:notice] = "#{@user.username} was successfully created."
     redirect_to signin_users_path # "sign in does not work"
   end
