@@ -1,0 +1,105 @@
+
+
+<body class="main-layout">
+
+
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a href="index.html">
+                                  <%= image_pack_tag 'logo.jpg'%>
+                                  </a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li class="active"> <a href="index.html">Home</a> </li>
+                                        
+                                        <!--<li> <a href="aboutus.html">About us</a> </li>-->
+                                        <li><%= link_to 'Log In', signin_users_path %></li>
+                                        
+                                        
+                                        <li> <a href="meet.html"> Meet me</a> </li>
+                                        <li> <a href="whatwedo.html"> What we do</a> </li>
+                                        <li> <a href="contact.html">Contact us</a> </li>
+                                        <li> <a href="contact.html">Login </a> </li>
+                                        <!--<li class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>-->
+                                        <!--<li class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a> </li>-->
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="slider_section">
+        <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <%= image_pack_tag 'banner.jpg'%>
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>Welcome to <br><strong class="cur">RIKKA BEAUTY</strong></h1>
+                            <span>And I can help you become more attractive</span>
+                            <div class="button_section"> <a class="main_bt" href="#">Contact us</a> <a class="main_bt" href="#">Click Here</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <%= image_pack_tag 'banner.jpg'%>
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>Hello <br><strong class="cur">I Am Jashika Jonson</strong></h1>
+                            <span>And I can help you lose weight fast and safety</span>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s, when an unknown<br> printer took a galley</p>
+                            <div class="button_section"> <a class="main_bt" href="#">Contact us</a> <a class="main_bt" href="#">Click Here</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <%= image_pack_tag 'banner.jpg'%>
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>Hello <br><strong class="cur">I Am Jashika Jonson</strong></h1>
+                            <span>And I can help you lose weight fast and safety</span>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s, when an unknown<br> printer took a galley</p>
+                            <div class="button_section"> <a class="main_bt" href="#">Contact us</a> <a class="main_bt" href="#">Click Here</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        </div>
+
+    </section>
+    
+</body>
+
+
+
+
