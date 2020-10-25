@@ -11,18 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201025181607) do
+ActiveRecord::Schema.define(version: 20201025202150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "products", force: :cascade do |t|
-    t.string  "pname"
-    t.string  "price"
-    t.string  "tags"
-    t.integer "picid"
-    t.string  "desc"
+  create_table "movies", force: :cascade do |t|
+    t.string   "title"
+    t.string   "rating"
+    t.text     "description"
+    t.datetime "release_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string   "productName"
+    t.string   "picture1"
+    t.string   "picture2"
+    t.string   "picture3"
+    t.string   "picture4"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "productName"
+    t.text   "description"
+    t.string "tags"
+    t.string "pictures"
+  end
+
+  add_index "products", ["productName"], name: "index_products_on_productName", unique: true, using: :btree
 
   create_table "resetpwd", force: :cascade do |t|
     t.string   "email"
@@ -30,6 +50,14 @@ ActiveRecord::Schema.define(version: 20201025181607) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "tagName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tags", ["tagName"], name: "index_tags_on_tagName", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string  "email"
@@ -40,8 +68,5 @@ ActiveRecord::Schema.define(version: 20201025181607) do
     t.string  "firstname"
     t.string  "phone"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end
