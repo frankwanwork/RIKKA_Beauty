@@ -7236,3 +7236,939 @@ Processing by UsersController#signin_show as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
   Rendered users/signin_show.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 209.33.52.82 at 2020-10-15 22:15:07 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 229ms (Views: 217.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/signin" for 209.33.52.82 at 2020-10-15 22:15:13 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WcPGSCx2Yg/kbPIapaxzHtgfMTyjFgx0k6YausmqHrt2sKcs5fLacz+9+JubIQliEmkpE7UaAXQSJe4Hjx9Mzw==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/2
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 209.33.52.82 at 2020-10-15 22:15:14 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 209.33.52.82 at 2020-10-15 22:15:21 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 209.33.52.82 at 2020-10-15 22:15:28 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4OC1nANBDu4NhD/2e4Mj0POxTZuncGHADlriVl4x+HDPk9T4ysW2ktZVNXdFDlmsOcdVtLF8bMCP2RbrGISqBA==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "ec2-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/signin" for 209.33.52.82 at 2020-10-15 22:15:28 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signup" for 209.33.52.82 at 2020-10-15 22:15:32 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 209.33.52.82 at 2020-10-15 22:15:46 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Ymb8HfIgOn3CoOy8TJGxBP83uOOvdz9lm2uWQLaR4P2+vqUvkw4lSzbiTPPvzy42YrGzJix0f0X7lrkRG8V9w==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "ec2-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/signin" for 209.33.52.82 at 2020-10-15 22:15:46 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signup" for 209.33.52.82 at 2020-10-15 22:16:11 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 209.33.52.82 at 2020-10-15 22:16:17 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6SN11ZSQx6nbbdR4gAPC3aOuIRKMOavi8c8DlJx1yH3GUBSxXRR/1QC83vm+jrihadg5PZo1puJwTPcp2sCaCQ==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "ec2-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/signin" for 209.33.52.82 at 2020-10-15 22:16:17 +0000
+Cannot render console from 209.33.52.82! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-15 23:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 246ms (Views: 233.9ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:32:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gMJIY5lQe3nowVmBRO23TYdyv43f2TNKTwB2NGwzibWvsSkHUNTDBTMQUwB6YM0xTQSnosnVPkrOg4KJKobbwQ==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/2
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 165.91.12.249 at 2020-10-15 23:32:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:32:27 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gMJIY5lQe3nowVmBRO23TYdyv43f2TNKTwB2NGwzibWvsSkHUNTDBTMQUwB6YM0xTQSnosnVPkrOg4KJKobbwQ==", "user"=>{"username"=>"ec2-user", "password"=>"rik"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rik"]]
+  Rendered users/signin.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:32:38 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:32:49 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e/LKmoJdi8muFaYBAEv5xhhXP97FPa7W0lsUXV46Dp9Ugav+S9kztXXErIA+xoO60iEn8dMxo9ZT2ODgGI9c6w==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"rikk", "password_confirmation"=>"rikk", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "rikk"], ["user_type", 0]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 9ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:32:49 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:32:54 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:33:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bWbq5RA2/8mX+i0b95J4R9IK3wiyOm869bdIoTBYdWZCFYuB2bJHtUwrJ5rJHwI7GHzHJ6Q2Yjp0NLwcdu0nEg==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-use", "email"=>"", "phone_number"=>"", "password"=>"rik", "password_confirmation"=>"rik", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-use"], ["password", "rik"], ["user_type", 0]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:33:04 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-15 23:35:55 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 230ms (Views: 218.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:36:01 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LejrR1+foRuTUWVIM/FZ06JgguOAtimqj135rKHosG8Cm4ojlhsZZ0iAb8kNfCOvaBaazJa6JKoO3g0R513iGw==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/2
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 165.91.12.249 at 2020-10-15 23:36:01 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:36:06 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LejrR1+foRuTUWVIM/FZ06JgguOAtimqj135rKHosG8Cm4ojlhsZZ0iAb8kNfCOvaBaazJa6JKoO3g0R513iGw==", "user"=>{"username"=>"ec2-user", "password"=>"rik"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rik"]]
+  Rendered users/signin.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:36:10 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:36:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NPi3S2k09W/uzcDCfwobGZGV5EfVpnUfEYweNbPvnDMbi9YvoLBNEzUcykNBh2FlW+P8aMOqeB+QD+qI9VrORw==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"ed", "password_confirmation"=>"ed", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "ed"], ["user_type", 0]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:36:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to Users (20201014001811)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "username" character varying, "password" character varying, "user_type" integer, "lastname" character varying, "firstname" character varying, "phone" character varying) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20201014001811"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Migrating to ResetPwdToken (20201015190945)
+  [1m[35m (0.1ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ec2-user/environment/RIKKA_Beauty/Code/db/migrate/20201015190945_reset_pwd_token.rb:6)
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "resetpwd" ("id" serial primary key, "email" character varying, "reset_token" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20201015190945"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-15 23:37:27 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 222ms (Views: 212.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:37:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9NN80NO4zuCDXgOmv6EJ1kCLirAho/mPfAAJhufRKXTboB20Gjx2nFiPCSeBLHOqiv2Snzev9I/9g/07oWR7AA==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  Rendered users/signin.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:37:40 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:37:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tTIe050DCoI1K5+R7gB+1kr/e2t2sv+jncHFJ89rhmiaQX+3VIey/u76lRDQjQSqgIljRGC+8qMcQjGaid7UHA==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"aaa", "password_confirmation"=>"aaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "ec2-user"], ["password", "aaa"], ["user_type", 0]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:37:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:37:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:37:58 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KziPVtbt0gJSzMUJW4rU0OlGZABJpWvQGSKB9QUJVH4ES+4yH2lqfokdz4hlB66sIzB8L1+pZtCYoXVIQ7wGCg==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"aaa", "password_confirmation"=>"aaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "ec2-user"], ["password", "aaa"], ["user_type", 0]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:37:58 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:38:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:38:07 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iitTjX3EInlF77k6Zy7i1q1rFVPbIhkBCqvOaoV4oYOlWDLptECaBZ4+s7tZo5iqZx0NfM0uFAGLKDrXw83z9w==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"aaa", "password_confirmation"=>"aaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "ec2-user"], ["password", "aaa"], ["user_type", 0]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:38:07 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-15 23:39:49 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 323ms (Views: 311.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:39:59 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:40:05 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"klz1A9iHQoVj1CpEVvoM32l6DtqZzs58BBAzfpsTMCB+DlS1FWNH5Od11kxVxkPH14uJpPCjEpG3rhv8AnatRQ==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"aaa", "password_confirmation"=>"aaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "aaa"], ["user_type", 0]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:40:05 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:40:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:40:13 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z6HGtUupjd7sFx2lFcB/6/TZCAVDI+PgBEOk31hzJvWL82cDhk2Iv2i24a0W/DDzSiiPeypOPw23/YxdwRa7kA==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"aaa", "password_confirmation"=>"aaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "aaa"], ["user_type", 0]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:40:13 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to Users (20201014001811)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20201014001811"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to ResetPwdToken (20201015190945)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/ec2-user/environment/RIKKA_Beauty/Code/db/migrate/20201015190945_reset_pwd_token.rb:6)
+  [1m[35m (5.6ms)[0m  CREATE TABLE "resetpwd" ("id" serial primary key, "email" character varying, "reset_token" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "username" character varying, "password" character varying, "user_type" integer, "lastname" character varying, "firstname" character varying, "phone" character varying) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")
+  [1m[36m (2.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20201015190945"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-15 23:53:30 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 224ms (Views: 214.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:53:32 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:53:41 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gzy2c5ZuDd+1wu/gkdu8Lo1ksUT/i255+WzSu1WKguD2Wlg1AewlCxcdaTz7L+kmQoCEEfuoNBGUEcJ3ams+gg==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"aaa", "password_confirmation"=>"aaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "aaa"], ["user_type", 0]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:53:41 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:53:43 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:53:49 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DJ5o1l3Vbt2SHYWme492MT5ejSxpGuhkIi/oO0w+E015+IaQyldGCTDCA3oReyM58bq4eW05sgxPUvj3c9+vLw==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"aaa", "password_confirmation"=>"aaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "aaa"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/signup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:54:04 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ojSvu6a2tyNuT9C7Rrjgg/t72E47GiZvSvg7qHRG+6TXUkH9MTSf98yQVmcsTLWLNJ/tGz85fAcnhStkS6dHxg==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  Rendered users/signin.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:24 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4bdfl0v7F6Vn4f2vsqB6fY8oFco2nMXg9iF3mZVfs6iU0bHR3Hk/ccU+e3PYVC91QMwgnzK/n4ibXGdVqr4Pyg==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+  Rendered users/signin.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:29 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H6o24+7Hd5IEBQ0o6mJ0vCO0OxDB1xIkhoQH8J3+gBBqzNileUVfRqbai/SAliG07FAORcX0SEzr+Rc8oh88cg==", "user"=>{"username"=>"ec2-user", "password"=>"aaa"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "aaa"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 165.91.12.249 at 2020-10-15 23:54:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:39 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MNL8D/5PH0t5m/4GYZjXFcpWHeV2zMGvtCxAYEPNDtRFtBJJac03n9tEeNoLbIIdBbIosHLvm8fZUVCsfCyytg==", "user"=>{"username"=>"ec2-user", "password"=>"cfcf"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "cfcf"]]
+  Rendered users/signin.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-15 23:54:41 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-15 23:56:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 240ms (Views: 229.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:56:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:56:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nh1/K0t9wkL1NwfX5YDZpe54qecdCAOCj1xbi+9CX4RDe5Ft3P/qllfogQuPdIytIZycshkrWeriIUtH0KPj5g==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "email"=>"", "phone_number"=>"", "password"=>"aaa", "password_confirmation"=>"aaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-user"], ["password", "aaa"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/signup.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:56:39 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:56:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tuLDayALOUQtdEM2sD5AAlVWSM4IZK1JIDWyxSxlA1bDhC0tt4kRkI+rxerayhUKmrJ9mwxH9yFNSKIJE4S/NA==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-userd", "email"=>"", "phone_number"=>"", "password"=>"aa", "password_confirmation"=>"aa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "ec2-userd"], ["password", "aa"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/signup.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:56:52 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:57:00 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qwdUPGfrjbG6GzewRLL6UWVpLZrrAo7e8y0lKIYrvn/eYbp68GmlZRjEsWwuRq9Zqo0Yz+8h1LaeUDXkucoCHQ==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-userdde", "email"=>"", "phone_number"=>"", "password"=>"aaaa", "password_confirmation"=>"aaaa", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (18.6ms)[0m  INSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", ""], ["username", "ec2-userdde"], ["password", "aaaa"], ["user_type", 0]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/signup.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 34ms (Views: 10.5ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-15 23:57:07 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-15 23:57:13 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m9SgBXFHoy1M+D99O2/2zDNNXN7F+eDs+DXdYv9Fs6vusk5D5sWL+e4nuaFRm6PE/Klpi8HauoSVSM2uwKQPyQ==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"crvfrgvtgv", "email"=>"", "phone_number"=>"", "password"=>"sss", "password_confirmation"=>"sss", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", ""], ["username", "crvfrgvtgv"], ["password", "sss"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/signup.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-16 00:02:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 231ms (Views: 219.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-16 00:02:24 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+  Rendered users/signup_show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-16 00:16:25 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 249ms (Views: 238.0ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-16 00:16:30 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7tX6es2txHDtnC/BGVcBHU5T2rq9ODvtQY2ESoSKLOebsxQ8Wi/spE9DqR1zo1QVgbfv77kbYYUs8JSGu2uQhQ==", "user"=>{"username"=>"ec2-user", "password"=>"aaa"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "aaa"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 165.91.12.249 at 2020-10-16 00:16:30 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-16 00:16:46 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7tX6es2txHDtnC/BGVcBHU5T2rq9ODvtQY2ESoSKLOebsxQ8Wi/spE9DqR1zo1QVgbfv77kbYYUs8JSGu2uQhQ==", "user"=>{"username"=>"ec2-user", "password"=>"ce"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "ce"]]
+  Rendered users/signin.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-16 01:19:19 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#signin_show as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 442ms (Views: 427.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-16 01:19:24 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AQNNcjwIhq4Izms19Ykvb9Fma/Sknw/KmnJKsK5xi4t0ZaM0q4queqoR7emffXpnHoJeoaC8VaL3D1p8kZA36Q==", "user"=>{"username"=>"ec2-user", "password"=>"aaa"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "aaa"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/1
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 165.91.12.249 at 2020-10-16 01:19:24 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
