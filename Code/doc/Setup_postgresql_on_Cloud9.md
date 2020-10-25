@@ -15,11 +15,16 @@ sudo service postgresql start
 bundle install --without production
 
 ```
+## Setup Webpacker
+```
+npm install -g yarn
+bundle exec rails webpacker:install
+```
 
 ## Setup postgresql
 ```
 sudo service postgresql start
-createuser -P -d ec2-user
+sudo -u postgres createuser -s ec2-user
 [set password: rikka]
 bundle exec rake db:create
 rake db:migrate
