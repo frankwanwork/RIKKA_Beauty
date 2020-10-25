@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'product/show'
+
+  get 'product/add'
+
+  get 'product/search'
+
+  get 'product/edit'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -25,8 +33,8 @@ Rails.application.routes.draw do
       match 'signin', to: 'users#signin', via: [:post]
       match 'signup', to: 'users#signup_show', via: [:get]
       match 'signup', to: 'users#signup', via: [:post] ## new -> signup (xz)
-      match 'forgot', to: 'users#forgot_show', via: [:get]
-      match 'forgot', to: 'users#forgot', via: [:post]
+      match 'forgot', to: 'users#forgot_show', via: [:post]
+      match 'forgot', to: 'users#forgot', via: [:get]
       match 'send_code', to: 'users#send_code', via: [:get]
     end
   end
