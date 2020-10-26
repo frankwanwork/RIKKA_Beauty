@@ -21,8 +21,8 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params.require(:user)[:username], password: params.require(:user)[:password])
     
     if @user
-
       session[:username] = @user.username
+      session[:usertype] = @user.user_type
       flash[:notice] = ' user#{@user.username} logins in successfully!'
 
       # also did not redirect to the different page according to the user type
@@ -46,9 +46,9 @@ class UsersController < ApplicationController
     else
       new_user[:user_type] = 0
     end
+
     begin 
-    @user = User.create!(new_user)
-    
+      @user = User.create!(new_user)
     rescue StandardError => e
       flash[:warning] = "Email or Username already exists!"
       puts e.message
