@@ -18,8 +18,8 @@ Rails.application.routes.draw do
     collection do
       match 'show', to: 'product#show', via: [:get]
       match 'search', to: 'product#search', via: [:get]
-      match 'edit', to: 'product#edit', via: [:post]
-      match 'add', to: 'product#add', via: [:post]
+      match 'edit', to: 'product#edit', via: [:get, :post]
+      match 'add', to: 'product#add', via: [:get, :post]
     end
   end
 

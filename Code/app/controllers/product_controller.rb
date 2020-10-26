@@ -9,28 +9,33 @@ class ProductController < ApplicationController
   end
 
   def add
-    new_product = product_params
-    puts "gg"
-    puts params
+    case request.method_symbol
+    when :get
+      return
+    when :post
+      new_product = product_params
+      puts "gg"
+      puts params
 
-    @picture = Picture.new
-    @picture.data = params.require(:product)[:image].data
-    @picture.pic_type = params.require(:product)[:image].content_type
-    @picture.filename = params.require(:product)[:image].filename
-    @picture.save
+      @picture = Picture.new
+      @picture.data = params.require(:product)[:image].data
+      @picture.pic_type = params.require(:product)[:image].content_type
+      @picture.filename = params.require(:product)[:image].filename
+      @picture.save
 
-    puts "uu"
-    new_product[:pictures] = @picture.id
+      puts "uu"
+      new_product[:pictures] = @picture.id
 #    begin
-      @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price])
+        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price])
 #    rescue StandardError => e
 #      flash[:warning] = "Product already exists!"
 #      puts e.message
 #      return
 #    end
-    puts "pp"
-    flash[:notice] = "#{@product.productName} was successfully created."
-    redirect_to product_index_path
+      puts "pp"
+      flash[:notice] = "#{@product.productName} was successfully created."
+      redirect_to product_index_path
+    end
   end
 
   def search
