@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'product/show'
-
-  match 'product/add', to: 'product#add', via: [:post]
-  match 'product/edit', to: 'product#edit', via: [:post]
-
-  get 'product/search'
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -22,6 +14,14 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :product do
+    collection do
+      match 'show', to: 'product#show', via: [:get]
+      match 'search', to: 'product#search', via: [:get]
+      match 'edit', to: 'product#edit', via: [:post]
+      match 'add', to: 'product#add', via: [:post]
+    end
+  end
 
   #scope module: 'users' do
   #  resouces :signin, signup, forgot, send_code

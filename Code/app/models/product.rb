@@ -4,3 +4,7 @@ class Product < ActiveRecord::Base
     
     mount_uploader :image, ImageUploader
 end
+
+class Picture < ActiveRecord::Base
+    belongs_to :product
+end
