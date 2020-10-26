@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   get 'product/show'
 
-  get 'product/add'
+  match 'product/add', to: 'product#add', via: [:post]
+  match 'product/edit', to: 'product#edit', via: [:post]
 
   get 'product/search'
 
-  get 'product/edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
