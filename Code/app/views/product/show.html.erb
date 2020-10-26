@@ -22,7 +22,7 @@
                                     <ul class="menu-area-main">
                                         <li><%= link_to 'Home', root_path %></li>
                                         <li><%= link_to 'Log In', signin_users_path %></li>
-                                        <li><%= link_to 'Products', product_show_path %></li>
+                                        <li><%= link_to 'Products', product_index_path %></li>
                                         
                                         <!--<li> <a href="meet.html"> Product </a> </li>-->
                                         <li> <a href="whatwedo.html"> Appointment </a> </li>
@@ -41,8 +41,8 @@
     
     <br>
     <h1>Products Gallery</h1>   
-    <li><%= link_to 'Add New', product_add_path %></li>  
-    <li><%= link_to 'Edit', product_edit_path %></li>   <br> <br> 
+    <li><%= link_to 'Add New', add_product_index_path %></li>  
+    <li><%= link_to 'Edit', edit_product_index_path %></li>   <br> <br> 
    
     &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
     <%= image_pack_tag '0283.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp

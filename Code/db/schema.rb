@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201026050606) do
+ActiveRecord::Schema.define(version: 20201026203518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,13 +25,11 @@ ActiveRecord::Schema.define(version: 20201026050606) do
   end
 
   create_table "pictures", force: :cascade do |t|
-    t.string   "productName"
-    t.string   "picture1"
-    t.string   "picture2"
-    t.string   "picture3"
-    t.string   "picture4"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "filename"
+    t.string   "pic_type"
+    t.binary   "data"
   end
 
   create_table "products", force: :cascade do |t|
@@ -39,6 +37,7 @@ ActiveRecord::Schema.define(version: 20201026050606) do
     t.text   "description"
     t.string "tags"
     t.string "pictures"
+    t.string "price"
   end
 
   add_index "products", ["productName"], name: "index_products_on_productName", unique: true, using: :btree
