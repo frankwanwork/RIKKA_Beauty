@@ -1,3 +1,5 @@
+
+
 /* eslint no-console:0 */
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
@@ -14,5 +16,24 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+// window.jQuery = window.$ = require('jquery')
+// require("@rails/ujs").start()
+// require("turbolinks").start()
+// require("@rails/activestorage").start()
+// require("channels")
 
-console.log('Hello World from Webpacker')
+// require("jquery.min")
+// require("popper.min")
+
+// require("custom")
+// require("jquery-3.0.0.min")
+// require("jquery.mCustomScrollbar.concat.min")
+// require("jquery.validate")
+// require("plugin")
+// require("bootstrap.bundle.min")
+
+require.context('../images', true)
+
+
+// console.log('Hello World from Webpacker')
+import 'css/site.scss'

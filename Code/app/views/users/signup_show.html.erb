@@ -1,6 +1,49 @@
-<h1>Welcome to RIKKA BEAUTY</h1>
+<body class="main-layout">
+
+
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a href="index.html">
+                                  <%= image_pack_tag 'logo.jpg'%>
+                                  </a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li class="active"> <a href="index.html">Home</a> </li>
+                                        
+                                        <!--<li> <a href="aboutus.html">About us</a> </li>-->
+                                        <li><%= link_to 'Log In', signin_users_path %></li>
+                                        <li><%= link_to 'Products', product_show_path %></li>
+                                        
+                                        <!--<li> <a href="meet.html"> Product </a> </li>-->
+                                        <li> <a href="whatwedo.html"> Appointment </a> </li>
+                                        <!--<li> <a href="contact.html">Contact us</a> </li>-->
+                                        <!--<li class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>-->
+                                        <!--<li class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a> </li>-->
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 <h2>Sign Up</h2>
 
+<center>
 <%= form_for:user, url: signup_users_path do |f| %>
   <p>
     <%= f.label :First_Name %><br>
@@ -12,11 +55,11 @@
   </p>
   <p>
     <%= f.label :Username %><br>
-    <%= f.text_field :username, class: 'form-control',id:"new_username"%>
+    <%= f.text_field :username, id:"new_username"%>
   </p>
   <p>
     <%= f.label :Email %><br>
-    <%= f.text_field :emai, class: 'form-control',id:"new_email" %>
+    <%= f.text_field :emai, id:"new_email" %>
   </p>
   <p>
     <%= f.label :Phone_Number %><br>
@@ -24,11 +67,11 @@
   </p>
   <p>
     <%= f.label :Password %><br>
-    <%= f.password_field :password, class: 'form-control',id:"new_password" %>
+    <%= f.password_field :password,id:"new_password" %>
   </p>
   <p>
     <%= f.label :Confirm_Password %><br>
-    <%= f.password_field :password_confirmation, class: 'form-control',id:"new_password_rep" %>
+    <%= f.password_field :password_confirmation, id:"new_password_rep" %>
   </p>
   <p>
     <%= f.label :Admin_Verification %><br>
@@ -44,3 +87,5 @@
 
 
 <%= link_to 'Back', signin_users_path %>
+
+</center>
