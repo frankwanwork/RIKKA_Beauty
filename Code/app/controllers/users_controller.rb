@@ -31,6 +31,7 @@ class UsersController < ApplicationController
       flash[:notice] = ' the username or password is not correct'
       #redirect_to signin_users_path
     end
+    redirect_to root_path
   end
 
   def signup_show
