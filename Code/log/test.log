@@ -4515,3 +4515,602 @@ Processing by UsersController#signin_show as HTML
   Rendered users/signin_show.html.erb within layouts/application (23.2ms)
 Completed 500 Internal Server Error in 3455ms (ActiveRecord: 0.4ms)
   [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[36m (106.1ms)[0m  [1mDROP DATABASE IF EXISTS "myapp_test"[0m
+  [1m[35m (346.5ms)[0m  CREATE DATABASE "myapp_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE "pictures" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "filename" character varying, "pic_type" character varying, "data" bytea) 
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "productName" character varying, "description" text, "tags" character varying, "pics" character varying, "price" character varying) [0m
+  [1m[35m (3.9ms)[0m  CREATE UNIQUE INDEX  "index_products_on_productName" ON "products" USING btree ("productName")
+  [1m[36m (6.7ms)[0m  [1mCREATE TABLE "resetpwd" ("id" serial primary key, "email" character varying, "reset_token" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "tags" ("id" serial primary key, "tagName" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_tags_on_tagName" ON "tags" USING btree ("tagName")[0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying, "username" character varying, "password" character varying, "user_type" integer, "lastname" character varying, "firstname" character varying, "phone" character varying) 
+  [1m[36m (3.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_username" ON "users" USING btree ("username")
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201027014530')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20201026203518')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201025163606')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20201026192946')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201025162143')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20201014001811')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201025163621')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20201015190945')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201026203314')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 20:45:42 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 5ad5b7109de3fd323d88
+Version: webpack 4.44.2
+Time: 3595ms
+Built at: 10/27/2020 8:45:47 PM
+                                                        Asset      Size                  Chunks                         Chunk Names
+                       js/application-36e2048c34118b0ae204.js  28.9 KiB             application  [emitted] [immutable]  application
+                   js/application-36e2048c34118b0ae204.js.map  22.9 KiB             application  [emitted] [dev]        application
+              js/bootstrap_bundle_min-67347ad3379eb2f4a725.js   101 KiB    bootstrap_bundle_min  [emitted] [immutable]  bootstrap_bundle_min
+          js/bootstrap_bundle_min-67347ad3379eb2f4a725.js.map  87.8 KiB    bootstrap_bundle_min  [emitted] [dev]        bootstrap_bundle_min
+                            js/custom-eed567534eadbb512429.js  13.3 KiB                  custom  [emitted] [immutable]  custom
+                        js/custom-eed567534eadbb512429.js.map  15.7 KiB                  custom  [emitted] [dev]        custom
+                      js/jquery_3_min-5e791fb14d45b451f99b.js  14.6 KiB            jquery_3_min  [emitted] [immutable]  jquery_3_min
+                  js/jquery_3_min-5e791fb14d45b451f99b.js.map  16.5 KiB            jquery_3_min  [emitted] [dev]        jquery_3_min
+            js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js  71.1 KiB  jquery_mCustomScrollba  [emitted] [immutable]  jquery_mCustomScrollba
+        js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js.map  57.1 KiB  jquery_mCustomScrollba  [emitted] [dev]        jquery_mCustomScrollba
+                        js/jquery_min-c6e24a10dd5fc0faa637.js   134 KiB              jquery_min  [emitted] [immutable]  jquery_min
+                    js/jquery_min-c6e24a10dd5fc0faa637.js.map   111 KiB              jquery_min  [emitted] [dev]        jquery_min
+                   js/jquery_validate-f162d87b755c0ec752ab.js  57.7 KiB         jquery_validate  [emitted] [immutable]  jquery_validate
+               js/jquery_validate-f162d87b755c0ec752ab.js.map  64.9 KiB         jquery_validate  [emitted] [dev]        jquery_validate
+                            js/plugin-13b9e655c91514a28ad8.js   847 KiB                  plugin  [emitted] [immutable]  plugin
+                        js/plugin-13b9e655c91514a28ad8.js.map   727 KiB                  plugin  [emitted] [dev]        plugin
+                            js/popper-024834a95b335ed618fd.js    33 KiB                  popper  [emitted] [immutable]  popper
+                        js/popper-024834a95b335ed618fd.js.map  27.7 KiB                  popper  [emitted] [dev]        popper
+                             js/test2-86a90bf4b394e013d45e.js   3.9 KiB                   test2  [emitted] [immutable]  test2
+                         js/test2-86a90bf4b394e013d45e.js.map   3.6 KiB                   test2  [emitted] [dev]        test2
+                                                manifest.json  6.23 KiB                          [emitted]              
+       media/images/0283-4b04b70a7f549b87ee7822d3d329044f.jpg   156 KiB                          [emitted]              
+       media/images/0294-3824ac83d506a5728a2c9f9b81dfbf41.jpg  97.6 KiB                          [emitted]              
+       media/images/0295-6de9c8c58347b8759a9ada44010846df.jpg   119 KiB                          [emitted]              
+       media/images/0512-86ee91534c0638a39f1bbb93c65ece69.jpg   291 KiB                          [emitted]              
+       media/images/0513-eded69cfa75b133a71d64d9349f87247.jpg   205 KiB                          [emitted]              
+       media/images/0514-d64e5855346118778216188bb33ab5f7.jpg   195 KiB                          [emitted]              
+       media/images/0515-acb5380e9cc03aaaa9e3953fed43d47f.jpg   165 KiB                          [emitted]              
+       media/images/0516-7fe01c16fa0439b734162d4b8f68e9cf.jpg   182 KiB                          [emitted]              
+       media/images/0517-911cfef97129349df7ee4ed3996efc5a.jpg   303 KiB                          [emitted]              
+       media/images/0518-60c1208cc021f35477c3b8fe791d17b6.jpg   253 KiB                          [emitted]              
+       media/images/0519-4ccdc0a9ab1161d4c9f7be92d20a7535.jpg   178 KiB                          [emitted]              
+       media/images/0520-695f37de5b58e0a70dfc9e1fdd998a8f.jpg   175 KiB                          [emitted]              
+       media/images/0521-a3a05cfc2a5a31ac5f76ae02fe7f9103.jpg   155 KiB                          [emitted]              
+       media/images/0522-75659a186969987998e86121df10fd55.jpg   216 KiB                          [emitted]              
+       media/images/0523-8fc9074f9b798f23abebcc643f6c85d5.jpg   295 KiB                          [emitted]              
+       media/images/0524-f146420c4453897c0693ece9e2f5616b.jpg   133 KiB                          [emitted]              
+          media/images/1-a1945aa2e11222ef3702c9f51bd40045.png  6.43 KiB                          [emitted]              
+          media/images/2-1a78a2eedae1d0e52a60d24bb3885315.png  6.53 KiB                          [emitted]              
+          media/images/3-6b1e12f8968eb3dd0426230a1a53d324.png  6.41 KiB                          [emitted]              
+          media/images/4-949f47386d53508e6ab9be3624d63fcc.png  6.41 KiB                          [emitted]              
+    media/images/Request-4c5e5c54491e2a87ef8ed5247132814f.jpg   138 KiB                          [emitted]              
+      media/images/about-a8c486f81299130333f64d9b165d199a.jpg  68.7 KiB                          [emitted]              
+   media/images/about-bg-8a69fd881d7d0207396999b92b13a6f7.jpg    30 KiB                          [emitted]              
+     media/images/banner-b7e0a757e2bc4d863b14440420365ad4.jpg  89.1 KiB                          [emitted]              
+    media/images/loading-556e9ff845b7dd0c62dcdbbb00babb4b.gif  34.7 KiB                          [emitted]              
+       media/images/logo-2bc0d724f39d30f85c0ff5356de19db6.jpg  3.16 KiB                          [emitted]              
+media/images/search_icon-9ddfcdc528c28b3756b2bed9d9eb8639.png  1.73 KiB                          [emitted]              
+   media/images/top-icon-901ddd1434be0d535fbe959d854d6966.png  1.02 KiB                          [emitted]              
+Entrypoint application = js/application-36e2048c34118b0ae204.js js/application-36e2048c34118b0ae204.js.map
+Entrypoint bootstrap_bundle_min = js/bootstrap_bundle_min-67347ad3379eb2f4a725.js js/bootstrap_bundle_min-67347ad3379eb2f4a725.js.map
+Entrypoint custom = js/custom-eed567534eadbb512429.js js/custom-eed567534eadbb512429.js.map
+Entrypoint jquery_3_min = js/jquery_3_min-5e791fb14d45b451f99b.js js/jquery_3_min-5e791fb14d45b451f99b.js.map
+Entrypoint jquery_mCustomScrollba = js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js.map
+Entrypoint jquery_min = js/jquery_min-c6e24a10dd5fc0faa637.js js/jquery_min-c6e24a10dd5fc0faa637.js.map
+Entrypoint jquery_validate = js/jquery_validate-f162d87b755c0ec752ab.js js/jquery_validate-f162d87b755c0ec752ab.js.map
+Entrypoint plugin = js/plugin-13b9e655c91514a28ad8.js js/plugin-13b9e655c91514a28ad8.js.map
+Entrypoint popper = js/popper-024834a95b335ed618fd.js js/popper-024834a95b335ed618fd.js.map
+Entrypoint test2 = js/test2-86a90bf4b394e013d45e.js js/test2-86a90bf4b394e013d45e.js.map
+[./app/javascript/css/site.scss] 657 bytes {application} [built]
+[./app/javascript/images sync recursive ^\.\/.*$] ./app/javascript/images sync ^\.\/.*$ 912 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.29 KiB {application} [built]
+[./app/javascript/packs/bootstrap_bundle_min.js] 95.9 KiB {bootstrap_bundle_min} [built]
+[./app/javascript/packs/custom.js] 9.46 KiB {custom} [built]
+[./app/javascript/packs/jquery_3_min.js] 10.4 KiB {jquery_3_min} [built]
+[./app/javascript/packs/jquery_mCustomScrollba.js] 65.1 KiB {jquery_mCustomScrollba} [built]
+[./app/javascript/packs/jquery_min.js] 130 KiB {jquery_min} [built]
+[./app/javascript/packs/jquery_validate.js] 53.4 KiB {jquery_validate} [built]
+[./app/javascript/packs/plugin.js] 840 KiB {plugin} [built]
+[./app/javascript/packs/popper.js] 27.9 KiB {popper} [built]
+[./app/javascript/packs/test2.js] 32 bytes {test2} [built]
+[./node_modules/webpack/buildin/amd-define.js] (webpack)/buildin/amd-define.js 85 bytes {jquery_3_min} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {jquery_mCustomScrollba} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {bootstrap_bundle_min} {popper} [built]
+    + 30 hidden modules
+
+ERROR in ./app/javascript/css/site.scss (./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/css/site.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+
+import 'stylesheets/animate.min'
+     ^
+      Invalid CSS after "import": expected selector, was "'stylesheets/animat"
+      in /home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/css/site.scss (line 1, column 7)
+ @ ./app/javascript/css/site.scss 2:26-221
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/packs/jquery_validate.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_validate.js 11:4-31
+
+ERROR in ./app/javascript/packs/jquery_mCustomScrollba.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_mCustomScrollba.js 3:46-67 86:46-67 171:46-67
+
+ERROR in ./app/javascript/packs/bootstrap_bundle_min.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/bootstrap_bundle_min.js 7:74-91
+
+ERROR in ./app/javascript/packs/plugin.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/plugin.js 5504:46-67 7999:46-67 8193:46-67 8327:46-67 9733:46-67
+
+ERROR in ./app/javascript/packs/jquery_mCustomScrollba.js
+Module not found: Error: Can't resolve 'jquery-mousewheel' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_mCustomScrollba.js 178:14-42
+
+
+warning package.json: No license field
+
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (5286.8ms)
+Completed 500 Internal Server Error in 8882ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 20:52:38 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 3573ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 20:57:26 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 653dddbe346d7cf27bf6
+Version: webpack 4.44.2
+Time: 2732ms
+Built at: 10/27/2020 8:57:30 PM
+                                                        Asset      Size                  Chunks                         Chunk Names
+                       js/application-f2f965eaa8d7db475a59.js  19.2 KiB             application  [emitted] [immutable]  application
+                   js/application-f2f965eaa8d7db475a59.js.map  13.7 KiB             application  [emitted] [dev]        application
+              js/bootstrap_bundle_min-67347ad3379eb2f4a725.js   101 KiB    bootstrap_bundle_min  [emitted] [immutable]  bootstrap_bundle_min
+          js/bootstrap_bundle_min-67347ad3379eb2f4a725.js.map  87.8 KiB    bootstrap_bundle_min  [emitted] [dev]        bootstrap_bundle_min
+                            js/custom-eed567534eadbb512429.js  13.3 KiB                  custom  [emitted] [immutable]  custom
+                        js/custom-eed567534eadbb512429.js.map  15.7 KiB                  custom  [emitted] [dev]        custom
+                      js/jquery_3_min-5e791fb14d45b451f99b.js  14.6 KiB            jquery_3_min  [emitted] [immutable]  jquery_3_min
+                  js/jquery_3_min-5e791fb14d45b451f99b.js.map  16.5 KiB            jquery_3_min  [emitted] [dev]        jquery_3_min
+            js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js  71.1 KiB  jquery_mCustomScrollba  [emitted] [immutable]  jquery_mCustomScrollba
+        js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js.map  57.1 KiB  jquery_mCustomScrollba  [emitted] [dev]        jquery_mCustomScrollba
+                        js/jquery_min-c6e24a10dd5fc0faa637.js   134 KiB              jquery_min  [emitted] [immutable]  jquery_min
+                    js/jquery_min-c6e24a10dd5fc0faa637.js.map   111 KiB              jquery_min  [emitted] [dev]        jquery_min
+                   js/jquery_validate-f162d87b755c0ec752ab.js  57.7 KiB         jquery_validate  [emitted] [immutable]  jquery_validate
+               js/jquery_validate-f162d87b755c0ec752ab.js.map  64.9 KiB         jquery_validate  [emitted] [dev]        jquery_validate
+                            js/plugin-13b9e655c91514a28ad8.js   847 KiB                  plugin  [emitted] [immutable]  plugin
+                        js/plugin-13b9e655c91514a28ad8.js.map   727 KiB                  plugin  [emitted] [dev]        plugin
+                            js/popper-024834a95b335ed618fd.js    33 KiB                  popper  [emitted] [immutable]  popper
+                        js/popper-024834a95b335ed618fd.js.map  27.7 KiB                  popper  [emitted] [dev]        popper
+                             js/test2-86a90bf4b394e013d45e.js   3.9 KiB                   test2  [emitted] [immutable]  test2
+                         js/test2-86a90bf4b394e013d45e.js.map   3.6 KiB                   test2  [emitted] [dev]        test2
+                                                manifest.json  6.23 KiB                          [emitted]              
+       media/images/0283-4b04b70a7f549b87ee7822d3d329044f.jpg   156 KiB                          [emitted]              
+       media/images/0294-3824ac83d506a5728a2c9f9b81dfbf41.jpg  97.6 KiB                          [emitted]              
+       media/images/0295-6de9c8c58347b8759a9ada44010846df.jpg   119 KiB                          [emitted]              
+       media/images/0512-86ee91534c0638a39f1bbb93c65ece69.jpg   291 KiB                          [emitted]              
+       media/images/0513-eded69cfa75b133a71d64d9349f87247.jpg   205 KiB                          [emitted]              
+       media/images/0514-d64e5855346118778216188bb33ab5f7.jpg   195 KiB                          [emitted]              
+       media/images/0515-acb5380e9cc03aaaa9e3953fed43d47f.jpg   165 KiB                          [emitted]              
+       media/images/0516-7fe01c16fa0439b734162d4b8f68e9cf.jpg   182 KiB                          [emitted]              
+       media/images/0517-911cfef97129349df7ee4ed3996efc5a.jpg   303 KiB                          [emitted]              
+       media/images/0518-60c1208cc021f35477c3b8fe791d17b6.jpg   253 KiB                          [emitted]              
+       media/images/0519-4ccdc0a9ab1161d4c9f7be92d20a7535.jpg   178 KiB                          [emitted]              
+       media/images/0520-695f37de5b58e0a70dfc9e1fdd998a8f.jpg   175 KiB                          [emitted]              
+       media/images/0521-a3a05cfc2a5a31ac5f76ae02fe7f9103.jpg   155 KiB                          [emitted]              
+       media/images/0522-75659a186969987998e86121df10fd55.jpg   216 KiB                          [emitted]              
+       media/images/0523-8fc9074f9b798f23abebcc643f6c85d5.jpg   295 KiB                          [emitted]              
+       media/images/0524-f146420c4453897c0693ece9e2f5616b.jpg   133 KiB                          [emitted]              
+          media/images/1-a1945aa2e11222ef3702c9f51bd40045.png  6.43 KiB                          [emitted]              
+          media/images/2-1a78a2eedae1d0e52a60d24bb3885315.png  6.53 KiB                          [emitted]              
+          media/images/3-6b1e12f8968eb3dd0426230a1a53d324.png  6.41 KiB                          [emitted]              
+          media/images/4-949f47386d53508e6ab9be3624d63fcc.png  6.41 KiB                          [emitted]              
+    media/images/Request-4c5e5c54491e2a87ef8ed5247132814f.jpg   138 KiB                          [emitted]              
+      media/images/about-a8c486f81299130333f64d9b165d199a.jpg  68.7 KiB                          [emitted]              
+   media/images/about-bg-8a69fd881d7d0207396999b92b13a6f7.jpg    30 KiB                          [emitted]              
+     media/images/banner-b7e0a757e2bc4d863b14440420365ad4.jpg  89.1 KiB                          [emitted]              
+    media/images/loading-556e9ff845b7dd0c62dcdbbb00babb4b.gif  34.7 KiB                          [emitted]              
+       media/images/logo-2bc0d724f39d30f85c0ff5356de19db6.jpg  3.16 KiB                          [emitted]              
+media/images/search_icon-9ddfcdc528c28b3756b2bed9d9eb8639.png  1.73 KiB                          [emitted]              
+   media/images/top-icon-901ddd1434be0d535fbe959d854d6966.png  1.02 KiB                          [emitted]              
+Entrypoint application = js/application-f2f965eaa8d7db475a59.js js/application-f2f965eaa8d7db475a59.js.map
+Entrypoint bootstrap_bundle_min = js/bootstrap_bundle_min-67347ad3379eb2f4a725.js js/bootstrap_bundle_min-67347ad3379eb2f4a725.js.map
+Entrypoint custom = js/custom-eed567534eadbb512429.js js/custom-eed567534eadbb512429.js.map
+Entrypoint jquery_3_min = js/jquery_3_min-5e791fb14d45b451f99b.js js/jquery_3_min-5e791fb14d45b451f99b.js.map
+Entrypoint jquery_mCustomScrollba = js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js.map
+Entrypoint jquery_min = js/jquery_min-c6e24a10dd5fc0faa637.js js/jquery_min-c6e24a10dd5fc0faa637.js.map
+Entrypoint jquery_validate = js/jquery_validate-f162d87b755c0ec752ab.js js/jquery_validate-f162d87b755c0ec752ab.js.map
+Entrypoint plugin = js/plugin-13b9e655c91514a28ad8.js js/plugin-13b9e655c91514a28ad8.js.map
+Entrypoint popper = js/popper-024834a95b335ed618fd.js js/popper-024834a95b335ed618fd.js.map
+Entrypoint test2 = js/test2-86a90bf4b394e013d45e.js js/test2-86a90bf4b394e013d45e.js.map
+[./app/javascript/images sync recursive ^\.\/.*$] ./app/javascript/images sync ^\.\/.*$ 912 bytes {application} [built]
+[./app/javascript/images/0283.jpg] 100 bytes {application} [optional] [built]
+[./app/javascript/packs/application.js] 1.29 KiB {application} [built]
+[./app/javascript/packs/bootstrap_bundle_min.js] 95.9 KiB {bootstrap_bundle_min} [built]
+[./app/javascript/packs/custom.js] 9.46 KiB {custom} [built]
+[./app/javascript/packs/jquery_3_min.js] 10.4 KiB {jquery_3_min} [built]
+[./app/javascript/packs/jquery_mCustomScrollba.js] 65.1 KiB {jquery_mCustomScrollba} [built]
+[./app/javascript/packs/jquery_min.js] 130 KiB {jquery_min} [built]
+[./app/javascript/packs/jquery_validate.js] 53.4 KiB {jquery_validate} [built]
+[./app/javascript/packs/plugin.js] 840 KiB {plugin} [built]
+[./app/javascript/packs/popper.js] 27.9 KiB {popper} [built]
+[./app/javascript/packs/test2.js] 32 bytes {test2} [built]
+[./node_modules/webpack/buildin/amd-define.js] (webpack)/buildin/amd-define.js 85 bytes {jquery_3_min} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {jquery_mCustomScrollba} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {bootstrap_bundle_min} {popper} [built]
+    + 27 hidden modules
+
+ERROR in ./app/javascript/packs/jquery_validate.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_validate.js 11:4-31
+
+ERROR in ./app/javascript/packs/jquery_mCustomScrollba.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_mCustomScrollba.js 3:46-67 86:46-67 171:46-67
+
+ERROR in ./app/javascript/packs/bootstrap_bundle_min.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/bootstrap_bundle_min.js 7:74-91
+
+ERROR in ./app/javascript/packs/plugin.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/plugin.js 5504:46-67 7999:46-67 8193:46-67 8327:46-67 9733:46-67
+
+ERROR in ./app/javascript/packs/jquery_mCustomScrollba.js
+Module not found: Error: Can't resolve 'jquery-mousewheel' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_mCustomScrollba.js 178:14-42
+
+
+warning package.json: No license field
+
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (3999.3ms)
+Completed 500 Internal Server Error in 7527ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 20:58:03 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 3496ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 20:58:20 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 147ms (Views: 138.4ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 20:58:20 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:00:06 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 147ms (Views: 138.4ms | ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:00:06 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:00:22 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 5ad5b7109de3fd323d88
+Version: webpack 4.44.2
+Time: 3177ms
+Built at: 10/27/2020 9:00:27 PM
+                                                        Asset      Size                  Chunks                         Chunk Names
+                       js/application-36e2048c34118b0ae204.js  28.9 KiB             application  [emitted] [immutable]  application
+                   js/application-36e2048c34118b0ae204.js.map  22.9 KiB             application  [emitted] [dev]        application
+              js/bootstrap_bundle_min-67347ad3379eb2f4a725.js   101 KiB    bootstrap_bundle_min  [emitted] [immutable]  bootstrap_bundle_min
+          js/bootstrap_bundle_min-67347ad3379eb2f4a725.js.map  87.8 KiB    bootstrap_bundle_min  [emitted] [dev]        bootstrap_bundle_min
+                            js/custom-eed567534eadbb512429.js  13.3 KiB                  custom  [emitted] [immutable]  custom
+                        js/custom-eed567534eadbb512429.js.map  15.7 KiB                  custom  [emitted] [dev]        custom
+                      js/jquery_3_min-5e791fb14d45b451f99b.js  14.6 KiB            jquery_3_min  [emitted] [immutable]  jquery_3_min
+                  js/jquery_3_min-5e791fb14d45b451f99b.js.map  16.5 KiB            jquery_3_min  [emitted] [dev]        jquery_3_min
+            js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js  71.1 KiB  jquery_mCustomScrollba  [emitted] [immutable]  jquery_mCustomScrollba
+        js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js.map  57.1 KiB  jquery_mCustomScrollba  [emitted] [dev]        jquery_mCustomScrollba
+                        js/jquery_min-c6e24a10dd5fc0faa637.js   134 KiB              jquery_min  [emitted] [immutable]  jquery_min
+                    js/jquery_min-c6e24a10dd5fc0faa637.js.map   111 KiB              jquery_min  [emitted] [dev]        jquery_min
+                   js/jquery_validate-f162d87b755c0ec752ab.js  57.7 KiB         jquery_validate  [emitted] [immutable]  jquery_validate
+               js/jquery_validate-f162d87b755c0ec752ab.js.map  64.9 KiB         jquery_validate  [emitted] [dev]        jquery_validate
+                            js/plugin-13b9e655c91514a28ad8.js   847 KiB                  plugin  [emitted] [immutable]  plugin
+                        js/plugin-13b9e655c91514a28ad8.js.map   727 KiB                  plugin  [emitted] [dev]        plugin
+                            js/popper-024834a95b335ed618fd.js    33 KiB                  popper  [emitted] [immutable]  popper
+                        js/popper-024834a95b335ed618fd.js.map  27.7 KiB                  popper  [emitted] [dev]        popper
+                             js/test2-86a90bf4b394e013d45e.js   3.9 KiB                   test2  [emitted] [immutable]  test2
+                         js/test2-86a90bf4b394e013d45e.js.map   3.6 KiB                   test2  [emitted] [dev]        test2
+                                                manifest.json  6.23 KiB                          [emitted]              
+       media/images/0283-4b04b70a7f549b87ee7822d3d329044f.jpg   156 KiB                          [emitted]              
+       media/images/0294-3824ac83d506a5728a2c9f9b81dfbf41.jpg  97.6 KiB                          [emitted]              
+       media/images/0295-6de9c8c58347b8759a9ada44010846df.jpg   119 KiB                          [emitted]              
+       media/images/0512-86ee91534c0638a39f1bbb93c65ece69.jpg   291 KiB                          [emitted]              
+       media/images/0513-eded69cfa75b133a71d64d9349f87247.jpg   205 KiB                          [emitted]              
+       media/images/0514-d64e5855346118778216188bb33ab5f7.jpg   195 KiB                          [emitted]              
+       media/images/0515-acb5380e9cc03aaaa9e3953fed43d47f.jpg   165 KiB                          [emitted]              
+       media/images/0516-7fe01c16fa0439b734162d4b8f68e9cf.jpg   182 KiB                          [emitted]              
+       media/images/0517-911cfef97129349df7ee4ed3996efc5a.jpg   303 KiB                          [emitted]              
+       media/images/0518-60c1208cc021f35477c3b8fe791d17b6.jpg   253 KiB                          [emitted]              
+       media/images/0519-4ccdc0a9ab1161d4c9f7be92d20a7535.jpg   178 KiB                          [emitted]              
+       media/images/0520-695f37de5b58e0a70dfc9e1fdd998a8f.jpg   175 KiB                          [emitted]              
+       media/images/0521-a3a05cfc2a5a31ac5f76ae02fe7f9103.jpg   155 KiB                          [emitted]              
+       media/images/0522-75659a186969987998e86121df10fd55.jpg   216 KiB                          [emitted]              
+       media/images/0523-8fc9074f9b798f23abebcc643f6c85d5.jpg   295 KiB                          [emitted]              
+       media/images/0524-f146420c4453897c0693ece9e2f5616b.jpg   133 KiB                          [emitted]              
+          media/images/1-a1945aa2e11222ef3702c9f51bd40045.png  6.43 KiB                          [emitted]              
+          media/images/2-1a78a2eedae1d0e52a60d24bb3885315.png  6.53 KiB                          [emitted]              
+          media/images/3-6b1e12f8968eb3dd0426230a1a53d324.png  6.41 KiB                          [emitted]              
+          media/images/4-949f47386d53508e6ab9be3624d63fcc.png  6.41 KiB                          [emitted]              
+    media/images/Request-4c5e5c54491e2a87ef8ed5247132814f.jpg   138 KiB                          [emitted]              
+      media/images/about-a8c486f81299130333f64d9b165d199a.jpg  68.7 KiB                          [emitted]              
+   media/images/about-bg-8a69fd881d7d0207396999b92b13a6f7.jpg    30 KiB                          [emitted]              
+     media/images/banner-b7e0a757e2bc4d863b14440420365ad4.jpg  89.1 KiB                          [emitted]              
+    media/images/loading-556e9ff845b7dd0c62dcdbbb00babb4b.gif  34.7 KiB                          [emitted]              
+       media/images/logo-2bc0d724f39d30f85c0ff5356de19db6.jpg  3.16 KiB                          [emitted]              
+media/images/search_icon-9ddfcdc528c28b3756b2bed9d9eb8639.png  1.73 KiB                          [emitted]              
+   media/images/top-icon-901ddd1434be0d535fbe959d854d6966.png  1.02 KiB                          [emitted]              
+Entrypoint application = js/application-36e2048c34118b0ae204.js js/application-36e2048c34118b0ae204.js.map
+Entrypoint bootstrap_bundle_min = js/bootstrap_bundle_min-67347ad3379eb2f4a725.js js/bootstrap_bundle_min-67347ad3379eb2f4a725.js.map
+Entrypoint custom = js/custom-eed567534eadbb512429.js js/custom-eed567534eadbb512429.js.map
+Entrypoint jquery_3_min = js/jquery_3_min-5e791fb14d45b451f99b.js js/jquery_3_min-5e791fb14d45b451f99b.js.map
+Entrypoint jquery_mCustomScrollba = js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js js/jquery_mCustomScrollba-14ae74f095e191d2ea87.js.map
+Entrypoint jquery_min = js/jquery_min-c6e24a10dd5fc0faa637.js js/jquery_min-c6e24a10dd5fc0faa637.js.map
+Entrypoint jquery_validate = js/jquery_validate-f162d87b755c0ec752ab.js js/jquery_validate-f162d87b755c0ec752ab.js.map
+Entrypoint plugin = js/plugin-13b9e655c91514a28ad8.js js/plugin-13b9e655c91514a28ad8.js.map
+Entrypoint popper = js/popper-024834a95b335ed618fd.js js/popper-024834a95b335ed618fd.js.map
+Entrypoint test2 = js/test2-86a90bf4b394e013d45e.js js/test2-86a90bf4b394e013d45e.js.map
+[./app/javascript/css/site.scss] 657 bytes {application} [built]
+[./app/javascript/images sync recursive ^\.\/.*$] ./app/javascript/images sync ^\.\/.*$ 912 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.29 KiB {application} [built]
+[./app/javascript/packs/bootstrap_bundle_min.js] 95.9 KiB {bootstrap_bundle_min} [built]
+[./app/javascript/packs/custom.js] 9.46 KiB {custom} [built]
+[./app/javascript/packs/jquery_3_min.js] 10.4 KiB {jquery_3_min} [built]
+[./app/javascript/packs/jquery_mCustomScrollba.js] 65.1 KiB {jquery_mCustomScrollba} [built]
+[./app/javascript/packs/jquery_min.js] 130 KiB {jquery_min} [built]
+[./app/javascript/packs/jquery_validate.js] 53.4 KiB {jquery_validate} [built]
+[./app/javascript/packs/plugin.js] 840 KiB {plugin} [built]
+[./app/javascript/packs/popper.js] 27.9 KiB {popper} [built]
+[./app/javascript/packs/test2.js] 32 bytes {test2} [built]
+[./node_modules/webpack/buildin/amd-define.js] (webpack)/buildin/amd-define.js 85 bytes {jquery_3_min} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {jquery_mCustomScrollba} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {bootstrap_bundle_min} {popper} [built]
+    + 30 hidden modules
+
+ERROR in ./app/javascript/css/site.scss (./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/css/site.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+
+import 'stylesheets/animate.min'
+     ^
+      Invalid CSS after "import": expected selector, was "'stylesheets/animat"
+      in /home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/css/site.scss (line 1, column 7)
+ @ ./app/javascript/css/site.scss 2:26-221
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/packs/jquery_validate.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_validate.js 11:4-31
+
+ERROR in ./app/javascript/packs/jquery_mCustomScrollba.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_mCustomScrollba.js 3:46-67 86:46-67 171:46-67
+
+ERROR in ./app/javascript/packs/bootstrap_bundle_min.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/bootstrap_bundle_min.js 7:74-91
+
+ERROR in ./app/javascript/packs/plugin.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/plugin.js 5504:46-67 7999:46-67 8193:46-67 8327:46-67 9733:46-67
+
+ERROR in ./app/javascript/packs/jquery_mCustomScrollba.js
+Module not found: Error: Can't resolve 'jquery-mousewheel' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_mCustomScrollba.js 178:14-42
+
+
+warning package.json: No license field
+
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (4450.1ms)
+Completed 200 OK in 4577ms (Views: 4568.9ms | ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:00:27 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:02:15 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 3528ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:04:50 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 2449ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:05:39 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 1211ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:06:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (33.2ms)
+Completed 500 Internal Server Error in 1222ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:06:14 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 953ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:07:09 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 1358ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:10:12 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 1520ms (Views: 1511.9ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:10:13 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:11:58 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 4940ms (Views: 4932.2ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-27 21:12:03 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
