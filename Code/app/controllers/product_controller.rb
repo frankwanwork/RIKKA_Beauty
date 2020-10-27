@@ -47,8 +47,27 @@ class ProductController < ApplicationController
 
   def edit
     if session[:usertype == 1]
-      Product.update_attributes!(product_params)
-      redirect to product_index_path 
+      case request.method_symbol
+      when :get
+        return
+      when :post
+        new_product = product_params
+        @picture = Picture.new
+        @picture.data = params.require(:product)[:image].read
+        @picture.pic_type = params.require(:product)[:image].content_type
+        @picture.filename = params.require(:product)[:image].original_filename
+        @picture.save
+
+        new_product[:pictures] = @picture.id
+        begin
+          @product = Product.update_attributes!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: new_product[:pictures])
+        rescue StandardError => e
+          flash[:warning] = "Product already exists!"
+          return
+        end
+        flash[:notice] = "#{@product.productName} was successfully created."
+        redirect_to product_index_path
+      end
     else
       flash[:notice] = "Operation denied."
     end
