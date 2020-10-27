@@ -16,9 +16,9 @@ class ProductController < ApplicationController
       @picture.filename = params.require(:product)[:image].original_filename
       @picture.save
 
-      new_product[:pictures] = [@picture]
+      new_product[:pictures] = @picture.id
 #    begin
-        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: "a")
+        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: new_product[:pictures])
 #    rescue StandardError => e
 #      flash[:warning] = "Product already exists!"
 #      puts e.message
