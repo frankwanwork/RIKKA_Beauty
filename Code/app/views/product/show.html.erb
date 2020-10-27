@@ -74,15 +74,30 @@
         </li>
     </ul>
 
+<br>
+<p class="p1">  New Products </p> <br><br>
 
   <% @products.each do |product| %>
     <tr>
-      <p> Name </p>
-      <td><%= product.productName %></td>
-      <p> Price </p>
-      <td><%= product.price %></td>
-       <p> Image </p>
-      <td><%=  image_tag product.pics %>
+      &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <td><%=  image_tag product.pics, width:'400px' %> <br>
+      <ul>
+          <li>
+              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+              <td><%= product.productName %> </td>
+          </li>
+          <li>
+              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+              Price: $
+              <td><%= product.price %> </td>
+              
+          </li>  
+          <li>
+              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+              Description: 
+              <td><%= product.description %> </td>
+          </li>
+      </ul>
     </tr>
   <% end %>  
     
