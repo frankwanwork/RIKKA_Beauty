@@ -23,6 +23,12 @@ Rails.application.routes.draw do
       match 'pic/:id', to: 'product#pic', via: [:get]
     end
   end
+  
+  resources :images do
+    collection do
+      match 'product/pic/:id', to: 'product#pic', via: [:get]
+    end
+  end
 
   #scope module: 'users' do
   #  resouces :signin, signup, forgot, send_code
