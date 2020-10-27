@@ -75,6 +75,16 @@
     </ul>
 
 
+  <% @products.each do |product| %>
+    <tr>
+      <p> Name </p>
+      <td><%= product.productName %></td>
+      <p> Price </p>
+      <td><%= product.price %></td>
+       <p> Image </p>
+      <td><%=  image_tag product.pics %>
+    </tr>
+  <% end %>  
     
 </body>
 

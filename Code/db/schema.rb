@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201026203518) do
+ActiveRecord::Schema.define(version: 20201027014530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20201026203518) do
     t.string "productName"
     t.text   "description"
     t.string "tags"
-    t.string "pictures"
+    t.string "pics"
     t.string "price"
   end
 
