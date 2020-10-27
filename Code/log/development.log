@@ -43441,3 +43441,571 @@ Cannot render console from 50.24.33.245! Allowed networks: 127.0.0.1, ::1, 127.0
 
 Started GET "/assets/slick.css" for 50.24.33.245 at 2020-10-27 05:39:43 +0000
 Cannot render console from 50.24.33.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pictures'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-27 05:58:36 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 3f2d8ede000e86e07163
+Version: webpack 4.44.2
+Time: 14642ms
+Built at: 10/27/2020 5:58:52 AM
+                                                        Asset      Size                  Chunks                         Chunk Names
+                       js/application-a0396b21bb577cc2a2c4.js  28.9 KiB             application  [emitted] [immutable]  application
+                   js/application-a0396b21bb577cc2a2c4.js.map  22.9 KiB             application  [emitted] [dev]        application
+              js/bootstrap_bundle_min-dcb9b2145db98496a970.js   101 KiB    bootstrap_bundle_min  [emitted] [immutable]  bootstrap_bundle_min
+          js/bootstrap_bundle_min-dcb9b2145db98496a970.js.map  87.8 KiB    bootstrap_bundle_min  [emitted] [dev]        bootstrap_bundle_min
+                            js/custom-2e7ff7f26c0fa522d354.js  13.3 KiB                  custom  [emitted] [immutable]  custom
+                        js/custom-2e7ff7f26c0fa522d354.js.map  15.7 KiB                  custom  [emitted] [dev]        custom
+                      js/jquery_3_min-156afe80297639ceff54.js  14.6 KiB            jquery_3_min  [emitted] [immutable]  jquery_3_min
+                  js/jquery_3_min-156afe80297639ceff54.js.map  16.5 KiB            jquery_3_min  [emitted] [dev]        jquery_3_min
+            js/jquery_mCustomScrollba-4552940908a89ca80652.js  71.1 KiB  jquery_mCustomScrollba  [emitted] [immutable]  jquery_mCustomScrollba
+        js/jquery_mCustomScrollba-4552940908a89ca80652.js.map  57.1 KiB  jquery_mCustomScrollba  [emitted] [dev]        jquery_mCustomScrollba
+                        js/jquery_min-477f8a0b085694042e83.js   134 KiB              jquery_min  [emitted] [immutable]  jquery_min
+                    js/jquery_min-477f8a0b085694042e83.js.map   111 KiB              jquery_min  [emitted] [dev]        jquery_min
+                   js/jquery_validate-ec481adea09d34765515.js  57.7 KiB         jquery_validate  [emitted] [immutable]  jquery_validate
+               js/jquery_validate-ec481adea09d34765515.js.map  64.9 KiB         jquery_validate  [emitted] [dev]        jquery_validate
+                            js/plugin-9c8c9fc5b4f6d02aafe6.js   847 KiB                  plugin  [emitted] [immutable]  plugin
+                        js/plugin-9c8c9fc5b4f6d02aafe6.js.map   727 KiB                  plugin  [emitted] [dev]        plugin
+                            js/popper-e71fc3d4b67871813e31.js    33 KiB                  popper  [emitted] [immutable]  popper
+                        js/popper-e71fc3d4b67871813e31.js.map  27.7 KiB                  popper  [emitted] [dev]        popper
+                             js/test2-e5209b43e10e96f4e41e.js  3.89 KiB                   test2  [emitted] [immutable]  test2
+                         js/test2-e5209b43e10e96f4e41e.js.map   3.6 KiB                   test2  [emitted] [dev]        test2
+                                                manifest.json  5.89 KiB                          [emitted]              
+       media/images/0283-4b04b70a7f549b87ee7822d3d329044f.jpg   156 KiB                          [emitted]              
+       media/images/0294-3824ac83d506a5728a2c9f9b81dfbf41.jpg  97.6 KiB                          [emitted]              
+       media/images/0295-6de9c8c58347b8759a9ada44010846df.jpg   119 KiB                          [emitted]              
+       media/images/0512-86ee91534c0638a39f1bbb93c65ece69.jpg   291 KiB                          [emitted]              
+       media/images/0513-eded69cfa75b133a71d64d9349f87247.jpg   205 KiB                          [emitted]              
+       media/images/0514-d64e5855346118778216188bb33ab5f7.jpg   195 KiB                          [emitted]              
+       media/images/0515-acb5380e9cc03aaaa9e3953fed43d47f.jpg   165 KiB                          [emitted]              
+       media/images/0516-7fe01c16fa0439b734162d4b8f68e9cf.jpg   182 KiB                          [emitted]              
+       media/images/0517-911cfef97129349df7ee4ed3996efc5a.jpg   303 KiB                          [emitted]              
+       media/images/0518-60c1208cc021f35477c3b8fe791d17b6.jpg   253 KiB                          [emitted]              
+       media/images/0519-4ccdc0a9ab1161d4c9f7be92d20a7535.jpg   178 KiB                          [emitted]              
+       media/images/0520-695f37de5b58e0a70dfc9e1fdd998a8f.jpg   175 KiB                          [emitted]              
+       media/images/0521-a3a05cfc2a5a31ac5f76ae02fe7f9103.jpg   155 KiB                          [emitted]              
+       media/images/0522-75659a186969987998e86121df10fd55.jpg   216 KiB                          [emitted]              
+       media/images/0523-8fc9074f9b798f23abebcc643f6c85d5.jpg   295 KiB                          [emitted]              
+       media/images/0524-f146420c4453897c0693ece9e2f5616b.jpg   133 KiB                          [emitted]              
+          media/images/1-a1945aa2e11222ef3702c9f51bd40045.png  6.43 KiB                          [emitted]              
+          media/images/2-1a78a2eedae1d0e52a60d24bb3885315.png  6.53 KiB                          [emitted]              
+          media/images/3-6b1e12f8968eb3dd0426230a1a53d324.png  6.41 KiB                          [emitted]              
+          media/images/4-949f47386d53508e6ab9be3624d63fcc.png  6.41 KiB                          [emitted]              
+    media/images/Request-4c5e5c54491e2a87ef8ed5247132814f.jpg   138 KiB                          [emitted]              
+      media/images/about-a8c486f81299130333f64d9b165d199a.jpg  68.7 KiB                          [emitted]              
+   media/images/about-bg-8a69fd881d7d0207396999b92b13a6f7.jpg    30 KiB                          [emitted]              
+     media/images/banner-b7e0a757e2bc4d863b14440420365ad4.jpg  89.1 KiB                          [emitted]              
+    media/images/loading-556e9ff845b7dd0c62dcdbbb00babb4b.gif  34.7 KiB                          [emitted]              
+       media/images/logo-2bc0d724f39d30f85c0ff5356de19db6.jpg  3.16 KiB                          [emitted]              
+media/images/search_icon-9ddfcdc528c28b3756b2bed9d9eb8639.png  1.73 KiB                          [emitted]              
+   media/images/top-icon-901ddd1434be0d535fbe959d854d6966.png  1.02 KiB                          [emitted]              
+Entrypoint application = js/application-a0396b21bb577cc2a2c4.js js/application-a0396b21bb577cc2a2c4.js.map
+Entrypoint bootstrap_bundle_min = js/bootstrap_bundle_min-dcb9b2145db98496a970.js js/bootstrap_bundle_min-dcb9b2145db98496a970.js.map
+Entrypoint custom = js/custom-2e7ff7f26c0fa522d354.js js/custom-2e7ff7f26c0fa522d354.js.map
+Entrypoint jquery_3_min = js/jquery_3_min-156afe80297639ceff54.js js/jquery_3_min-156afe80297639ceff54.js.map
+Entrypoint jquery_mCustomScrollba = js/jquery_mCustomScrollba-4552940908a89ca80652.js js/jquery_mCustomScrollba-4552940908a89ca80652.js.map
+Entrypoint jquery_min = js/jquery_min-477f8a0b085694042e83.js js/jquery_min-477f8a0b085694042e83.js.map
+Entrypoint jquery_validate = js/jquery_validate-ec481adea09d34765515.js js/jquery_validate-ec481adea09d34765515.js.map
+Entrypoint plugin = js/plugin-9c8c9fc5b4f6d02aafe6.js js/plugin-9c8c9fc5b4f6d02aafe6.js.map
+Entrypoint popper = js/popper-e71fc3d4b67871813e31.js js/popper-e71fc3d4b67871813e31.js.map
+Entrypoint test2 = js/test2-e5209b43e10e96f4e41e.js js/test2-e5209b43e10e96f4e41e.js.map
+[./app/javascript/css/site.scss] 657 bytes {application} [built]
+[./app/javascript/images sync recursive ^\.\/.*$] ./app/javascript/images sync ^\.\/.*$ 912 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.29 KiB {application} [built]
+[./app/javascript/packs/bootstrap_bundle_min.js] 95.9 KiB {bootstrap_bundle_min} [built]
+[./app/javascript/packs/custom.js] 9.46 KiB {custom} [built]
+[./app/javascript/packs/jquery_3_min.js] 10.4 KiB {jquery_3_min} [built]
+[./app/javascript/packs/jquery_mCustomScrollba.js] 65.1 KiB {jquery_mCustomScrollba} [built]
+[./app/javascript/packs/jquery_min.js] 130 KiB {jquery_min} [built]
+[./app/javascript/packs/jquery_validate.js] 53.4 KiB {jquery_validate} [built]
+[./app/javascript/packs/plugin.js] 840 KiB {plugin} [built]
+[./app/javascript/packs/popper.js] 27.9 KiB {popper} [built]
+[./app/javascript/packs/test2.js] 32 bytes {test2} [built]
+[./node_modules/webpack/buildin/amd-define.js] (webpack)/buildin/amd-define.js 85 bytes {jquery_3_min} [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {jquery_mCustomScrollba} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {bootstrap_bundle_min} {popper} [built]
+    + 30 hidden modules
+
+ERROR in ./app/javascript/css/site.scss (./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/css/site.scss)
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+
+import 'stylesheets/animate.min'
+     ^
+      Invalid CSS after "import": expected selector, was "'stylesheets/animat"
+      in /home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/css/site.scss (line 1, column 7)
+ @ ./app/javascript/css/site.scss 2:26-221
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/packs/jquery_mCustomScrollba.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_mCustomScrollba.js 3:46-67 86:46-67 171:46-67
+
+ERROR in ./app/javascript/packs/jquery_validate.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_validate.js 11:4-31
+
+ERROR in ./app/javascript/packs/bootstrap_bundle_min.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/bootstrap_bundle_min.js 7:74-91
+
+ERROR in ./app/javascript/packs/plugin.js
+Module not found: Error: Can't resolve 'jquery' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/plugin.js 5504:46-67 7999:46-67 8193:46-67 8327:46-67 9733:46-67
+
+ERROR in ./app/javascript/packs/jquery_mCustomScrollba.js
+Module not found: Error: Can't resolve 'jquery-mousewheel' in '/home/ec2-user/environment/RIKKA_Beauty/Code/app/javascript/packs'
+ @ ./app/javascript/packs/jquery_mCustomScrollba.js 178:14-42
+
+
+warning package.json: No license field
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (16273.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16826ms (Views: 16816.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.9ms)
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-27 05:58:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-27 05:59:07 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (54.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 205ms (Views: 204.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.7ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-27 05:59:08 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (45.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.0ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-27 05:59:09 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-27 05:59:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (33.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 184ms (Views: 170.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.9ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-27 05:59:15 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
