@@ -2,7 +2,6 @@ class ProductController < ApplicationController
 
   def show
     @products = Product.all
-    puts @products.pictures
   end
 
   def add
@@ -17,9 +16,9 @@ class ProductController < ApplicationController
       @picture.filename = params.require(:product)[:image].original_filename
       @picture.save
 
-      new_product[:pictures] = @picture.id.to_s 
+      new_product[:pictures] = [@picture]
 #    begin
-        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pictures: new_product[:pictures])
+        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: "a")
 #    rescue StandardError => e
 #      flash[:warning] = "Product already exists!"
 #      puts e.message
