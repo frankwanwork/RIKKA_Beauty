@@ -2,6 +2,15 @@ class ProductController < ApplicationController
 
   def show
     @products = Product.all
+    @products.each do |product|
+      product.pics = "product/pic/" + product.pics
+      puts product.pics
+    end
+  end
+
+  def pic
+    pic = Picture.find_by(id: params[:id])
+    send_data pic.data, :filename => pic.filename, :type => pic.pic_type
   end
 
   def add
@@ -24,7 +33,6 @@ class ProductController < ApplicationController
 #      puts e.message
 #      return
 #    end
-      puts "pp"
       flash[:notice] = "#{@product.productName} was successfully created."
       redirect_to product_index_path
     end
