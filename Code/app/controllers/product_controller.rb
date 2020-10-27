@@ -1,11 +1,8 @@
 class ProductController < ApplicationController
-  private
-  def product_params
-    params.require(:product).permit(:product_name, :description, :tags, :price)
-  end
 
   def show
     @products = Product.all
+    puts @products.pictures
   end
 
   def add
@@ -14,19 +11,15 @@ class ProductController < ApplicationController
       return
     when :post
       new_product = product_params
-      puts "gg"
-      puts params
-
       @picture = Picture.new
-      @picture.data = params.require(:product)[:image].data
+      @picture.data = params.require(:product)[:image].read
       @picture.pic_type = params.require(:product)[:image].content_type
-      @picture.filename = params.require(:product)[:image].filename
+      @picture.filename = params.require(:product)[:image].original_filename
       @picture.save
 
-      puts "uu"
-      new_product[:pictures] = @picture.id
+      new_product[:pictures] = @picture.id.to_s 
 #    begin
-        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price])
+        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pictures: new_product[:pictures])
 #    rescue StandardError => e
 #      flash[:warning] = "Product already exists!"
 #      puts e.message
@@ -53,4 +46,10 @@ class ProductController < ApplicationController
       flash[:notice] = "Operation denied."
     end
   end
+
+  private
+  def product_params
+    params.require(:product).permit(:product_name, :description, :tags, :price)
+  end
+
 end
