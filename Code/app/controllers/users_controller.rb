@@ -50,14 +50,14 @@ class UsersController < ApplicationController
 
     begin 
       @user = User.create!(new_user)
+      redirect_to signin_users_path # "sign in does not work"
     rescue StandardError => e
       #flash[:warning] = "Email or Username already exists!"
       #puts e.message
-      return
+      redirect_to signup_users_path
     end
     
     # flash[:notice] = "#{@user.username} was successfully created."
-    redirect_to signin_users_path # "sign in does not work"
   end
 
   def forgot_show
