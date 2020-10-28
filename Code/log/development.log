@@ -51559,3 +51559,2312 @@ Cannot render console from 128.194.2.119! Allowed networks: 127.0.0.1, ::1, 127.
 Started GET "/assets/jquery-ui.css" for 128.194.2.119 at 2020-10-27 21:11:51 +0000
 Cannot render console from 128.194.2.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 >>>>>>> 9ccacceb16d6ee26a0d6a5602654b95fa947cfce
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pictures'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'resetpwd'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:00:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 341ms (Views: 332.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animate.min.self-d60c5c99b6171cdec6d0bb8232d5de858fe4e5fa1f25afd11a9d387577cee91a.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-788021fc3cdf9058058c02cf1f5a5d973ac3119e0691a020454b21699ac991fd.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.self-9606323c5d3bf9611901a313200d58f27d4faafaec91f2c2fcabd25f507581bb.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.self-306130e6ba08a261d693df60443a670ca53a7a541654c4138090053ccf0a94a2.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.self-7cb87ce3679ce39e888c3dc5091928e5c50615b288f794c2502fcaf44e2e2ae4.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.self-03e99d67cc43ba4969fdc88876bcd26382c0ed443da90875f1d0555559d7aa0f.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.mCustomScrollbar.min.self-49c3b1270320678681016927a876415596066ad3b948001e8e311f89b650f199.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.self-28e1c279b4d49c115b85815c55c0e267cbff50976a9318b3abffd67c5e3d5992.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/responsive.self-526f761a537706a1b2c17dd69a44d21defbe56a9efea2a03962dcd58227a2137.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.6ms)
+
+
+Started GET "/assets/jquery-ui.self-d7d6c85017dd9630a85bfe5b21ad9063cfc6dd438e30c47a790cf62011b3564b.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-8601c41a84ec621b598d5b010633dd97aedbcef65851edb0451e2c63162d2c21.css?body=1" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:00:03 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 79ms (Views: 66.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:00:17 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-28 03:00:20 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 27ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:00:20 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.2ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:00:20 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:00:20 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:00:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:00:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:00:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:00:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:00:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:00:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:00:21 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-28 03:00:32 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zqlqy9Ny+RixMugg942TKsrBaY4+LydqnOOQ1bk3/E8VsrdkrvyDDWbhFDlIY+1nks+Gjw9c0IwVvRfcjPKW7g==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "emai"=>"", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/signup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 13.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:00:32 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.0ms)
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:00:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-28 03:00:36 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0rBRvykxhrbXNzUzoVMnwMnCZNr4MRV402iNZ43ODQChq4wQVL/8owDkySoevVmNkcyL28lC4p5aNgpuuAtnoQ==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user1", "emai"=>"", "phone_number"=>"", "password"=>"everve", "password_confirmation"=>"vefverfvefv", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user1"], ["password", "everve"], ["user_type", 0]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/users/signin
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.2ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:00:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-28 03:00:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup" for 165.91.12.249 at 2020-10-28 03:01:01 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ynWUC8dYTDgSAyXSS+cYoV479DCIRkvcTu/S6QJV+PW5bkmkutY2LcXQ2cv0CWbsBjUbMbk1vDrHsVXgN5CSVA==", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "emai"=>"", "phone_number"=>"", "password"=>"eveve", "password_confirmation"=>"vevfevf", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "eveve"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/signup.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:01:01 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.6ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:01:02 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signup" for 165.91.12.249 at 2020-10-28 03:01:36 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:02:44 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 248ms (Views: 240.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.6ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:02:45 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 84ms (Views: 70.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.9ms)
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:02:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-28 03:02:52 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GP+5z77YmsJlHsbqrnn8h4z6ueg8su0FRsf58cFjz1Vr5GRgw1bg17LNOvMRl4LK1PRW6Q3BGuPPmX749Kal9A==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:02:52 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 58ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.6ms)
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:02:53 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:14:30 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 264ms (Views: 255.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:14:31 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-28 03:14:32 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 50ms (Views: 40.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:14:32 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.2ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:14:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBvADi+AKXSddKUJ2ImIsfXsJrkPPYRx2m/2uFI+4s0jAB2hUg5TYUqnWRBnZ/b8reLJuD5Oc5dTMXGxZ/uIbA==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.1ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:14:37 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:19:25 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 259ms (Views: 250.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:19:26 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 51ms (Views: 41.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.3ms)
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:19:28 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-28 03:32:11 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zByKCfDv5Pi12rlAD3UI5GLGQT7LfgjMN4NomsqVSfG/B1emjWGe7WIJRVmwm3apOsiuP/oN/yq+3e+T/1AjUA==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 76ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.9ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:32:12 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.6ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:32:14 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BifaFf5wjuWeSG2JfzfKiSzvOdrgo8e+8TARFlnYgPh1PAe6g/708EmbkZDA2bTEdOHW29HQMFh4bpYfbB3qWQ==", "user"=>{"username"=>"cercerc", "password"=>"d2ed2"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "cercerc"], ["password", "d2ed2"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.2ms)
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:32:18 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:32:32 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 254ms (Views: 245.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.3ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:32:33 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-28 03:32:34 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 50ms (Views: 40.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.5ms)
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:32:35 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-28 03:32:41 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rouA/5vbmDJMmBpO1Hw0dokwb+1OrwE0vaT4tkhLnd3dkF1Q5lXiJ5tL5ldrkko70T6A7H/c9tI0+n+/fY73fA==", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:32:41 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 73ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.4ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:32:42 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/signin" for 165.91.12.249 at 2020-10-28 03:32:43 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:32:43 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.0ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:32:43 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:32:43 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:32:44 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:32:44 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:32:44 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:32:44 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:32:44 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:32:44 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:32:44 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/signin" for 165.91.12.249 at 2020-10-28 03:32:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pxgHCsOEh72dTDoz8Yq1BUORm7bmyJqCkunOkzQqwlnUA9qlvgr9qEqfxipOZMtIG590t9e7bWQbt0maAe+o+A==", "user"=>{"username"=>"asdfgg", "password"=>"cevervrevret"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "asdfgg"], ["password", "cevervrevret"]]
+Redirected to https://88520bf333b34ee5a36b4be2397f851f.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:32:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 60ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:32:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 165.91.12.249 at 2020-10-28 03:46:47 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 258ms (Views: 250.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:46:48 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/product/show" for 165.91.12.249 at 2020-10-28 03:46:50 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (2.8ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 136ms (Views: 104.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/javascripts/application.js" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+  rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  /home/ec2-user/.rvm/rubies/ruby-2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.0ms)
+
+
+Started GET "/assets/meanmenu.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/font-awesome.min.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/normalize.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery-ui.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/slick.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/owl.carousel.min.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nice-select.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.fancybox.min.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/animate.min.css" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/images/product/pic/1" for 165.91.12.249 at 2020-10-28 03:46:51 +0000
+Cannot render console from 165.91.12.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductController#pic as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (3.3ms)[0m  [1mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+Sent data tmp1.png (2.5ms)
+Completed 200 OK in 17ms (Views: 2.4ms | ActiveRecord: 4.5ms)

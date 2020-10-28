@@ -5171,3 +5171,1533 @@ Processing by UsersController#signin_show as HTML
 Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.3ms)
   [1m[35m (0.3ms)[0m  ROLLBACK
 >>>>>>> 9ccacceb16d6ee26a0d6a5602654b95fa947cfce
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 02:53:49 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (97.6ms)
+Completed 200 OK in 4875ms (Views: 4851.8ms | ActiveRecord: 1.8ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 02:53:54 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 266ms (Views: 247.7ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/19
+Redirected to 
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 63ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 13ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 02:54:10 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered users/signup.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 273ms (Views: 248.0ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/26
+Redirected to 
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.8ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 02:58:04 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 02:58:05 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 02:58:05 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 02:58:05 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 02:58:05 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 263ms (Views: 244.8ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/31
+Redirected to 
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 61ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 15ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:02:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 270ms (Views: 251.7ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:03:12 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 277ms (Views: 259.5ms | ActiveRecord: 0.9ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:04:04 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:04:26 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (57.1ms)
+Completed 200 OK in 260ms (Views: 241.9ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:04:26 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/index" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:04:27 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:09:54 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 272ms (Views: 253.7ms | ActiveRecord: 0.9ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:09:54 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:09:55 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:09:55 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 03:09:55 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:09:55 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 272ms (Views: 253.0ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/56
+Redirected to 
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:10:22 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (76.5ms)
+Completed 200 OK in 338ms (Views: 301.2ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/61
+Redirected to 
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 03:13:43 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:13:44 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:13:44 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 03:13:44 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:13:44 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:14:13 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 259ms (Views: 241.6ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/66
+Redirected to 
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/index.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 60ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:14:14 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:15:28 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 225ms (Views: 216.9ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:15:29 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:15:29 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/71
+Redirected to 
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:36:30 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 240ms (Views: 231.5ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-28 03:36:30 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-28 03:36:30 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/72
+Redirected to 
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:38:32 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 262ms (Views: 244.7ms | ActiveRecord: 1.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:38:32 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:51:28 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 264ms (Views: 246.1ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:52:17 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 218ms (Views: 183.9ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:52:48 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 268ms (Views: 249.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:56:52 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 270ms (Views: 246.4ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 03:57:48 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 266ms (Views: 247.5ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 04:02:02 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 269ms (Views: 251.5ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/product/show" for 127.0.0.1 at 2020-10-28 04:02:02 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

@@ -17,16 +17,30 @@ Background: an existing dataset with products and pictures
   # | name1         | desc1        | tag1   | pic1  | p1      |
   # | name2         | desc2        | tag2   | pic2  | p2      |
   
-  And I am on the Rikka product page
+  # And I am on the Rikka product page
 
-Scenario: add the product to the dataset
+Scenario: check the existing product on the product page
   When I am on the Rikka product page
+  Then I should see "Product 1"
+  And I should see "Product 2"
+  And I should see "Product 3"
+  And I should see "Product 4"
+  And I should see "Price: $10"
+  And I should see "Price: $15"
+  And I should see "Price: $20"
+  And I should see "French Tip"
+  And I should see "Almond"
+  And I should see "Stiletto"
+  And I should see "Oval"
 #   And I fill in "username" with "ec2-user"
 #   And I fill in "password" with "rikka"
 #   And I press "Log In"
 #   Then I should not be on the Rikka home page
 #   And I should see "logins in successfully"
-  
+
+Scenario: add the product to the dataset
+  When I am on the Rikka product page
+  And I press "Edit"
   
 # Scenario: sign in with the wrong username
 #   When I am on the Rikka home page
