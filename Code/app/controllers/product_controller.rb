@@ -19,28 +19,24 @@ class ProductController < ApplicationController
       return
     when :post
       new_product = product_params
-      unless params.require(:product)[:image].blank?
-        @picture = Picture.new
-        @picture.data = params.require(:product)[:image].read
-        @picture.pic_type = params.require(:product)[:image].content_type
-        @picture.filename = params.require(:product)[:image].original_filename
-        @picture.save
-        
-        new_product[:pictures] = @picture.id
-        begin
-          @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: new_product[:pictures])
-        rescue StandardError => e
-          flash[:warning] = "Product already exists!"
-          puts e.message
-          return
-        end
-        flash[:notice] = "#{@product.productName} was successfully created."
-        redirect_to product_index_path
-      end
-    
+      @picture = Picture.new
+      @picture.data = params.require(:product)[:image].read
+      @picture.pic_type = params.require(:product)[:image].content_type
+      @picture.filename = params.require(:product)[:image].original_filename
+      @picture.save
+
+      new_product[:pictures] = @picture.id
+#    begin
+        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: new_product[:pictures])
+#    rescue StandardError => e
+#      flash[:warning] = "Product already exists!"
+#      puts e.message
+#      return
+#    end
+      flash[:notice] = "#{@product.productName} was successfully created."
+      redirect_to product_index_path
     end
   end
-    
 
   def search
     @product = Product.all
@@ -56,28 +52,24 @@ class ProductController < ApplicationController
         return
       when :post
         new_product = product_params
-          @picture = Picture.new
-          @picture.data = params.require(:product)[:image].read
-          @picture.pic_type = params.require(:product)[:image].content_type
-          @picture.filename = params.require(:product)[:image].original_filename
-          @picture.save
-      
-        
-        
+        @picture = Picture.new
+        @picture.data = params.require(:product)[:image].read
+        @picture.pic_type = params.require(:product)[:image].content_type
+        @picture.filename = params.require(:product)[:image].original_filename
+        @picture.save
 
         new_product[:pictures] = @picture.id
         begin
           @product = Product.update_attributes!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: new_product[:pictures])
         rescue StandardError => e
-          flash[:warning] = "Product already exists!"
-          puts e.message
+          #flash[:warning] = "Product already exists!"
           return
         end
-        flash[:notice] = "#{@product.productName} was successfully created."
+        #flash[:notice] = "#{@product.productName} was successfully created."
         redirect_to product_index_path
       end
     else
-      flash[:notice] = "Operation denied."
+      #flash[:notice] = "Operation denied."
     end
   end
 
