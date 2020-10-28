@@ -1,19 +1,19 @@
-Feature: allow the user sign in with correct username and password
+# Feature: allow the user sign in with correct username and password
  
-  As a valid user
-  So that I can sign in and manage the website
-  I want to sign in the website using the correct user name and password
+#   As a valid user
+#   So that I can sign in and manage the website
+#   I want to sign in the website using the correct user name and password
 
-Background: an existing user with username "ec2-user" and password "rikka"
+# Background: an existing user with username "ec2-user" and password "rikka"
 
-  Given the following users exist:
-  | username                | password |  email              |
-  | ec2-user                | rikka    |  email_0_@gamil.com |
+#   Given the following users exist:
+#   | username                | password |  email              |
+#   | ec2-user                | rikka    |  email_0_@gamil.com |
   
-  And I am on the Rikka home page
+#   And I am on the Rikka home page
 
-Scenario: sign in with the correct username and password
-  When I am on the Rikka home page
+# Scenario: sign in with the correct username and password
+#   When I am on the Rikka home page
 #   And I fill in "username" with "ec2-user"
 #   And I fill in "password" with "rikka"
 #   And I press "Log In"
