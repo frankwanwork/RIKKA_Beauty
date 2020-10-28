@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   def signup
     # sign up
     new_user = user_params.except(:security_code)
-    if params[:security_code] == "rikka"
+    if params.require(:user)[:security_code] == "rikka"
       new_user[:user_type] = 1
     else
       new_user[:user_type] = 0

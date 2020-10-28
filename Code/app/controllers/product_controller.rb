@@ -48,25 +48,42 @@ class ProductController < ApplicationController
   end
 
   def edit
-    if session[:usertype == 1]
+    puts session[:username]
+    puts session[:usertype]
+    if session[:usertype] == 1
       case request.method_symbol
       when :get
         return
       when :post
         new_product = product_params
-        @picture = Picture.new
-        @picture.data = params.require(:product)[:image].read
-        @picture.pic_type = params.require(:product)[:image].content_type
-        @picture.filename = params.require(:product)[:image].original_filename
-        @picture.save
-
-        new_product[:pictures] = @picture.id
-        begin
-          @product = Product.update_attributes!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: new_product[:pictures])
-        rescue StandardError => e
-          #flash[:warning] = "Product already exists!"
-          return
+        if params.require(:product)[:image] != nil
+          @picture = Picture.new
+          @picture.data = params.require(:product)[:image].read
+          @picture.pic_type = params.require(:product)[:image].content_type
+          @picture.filename = params.require(:product)[:image].original_filename
+          @picture.save
+          new_product[:pictures] = @picture.id
         end
+
+        @product = Product.find_by(productName: new_product[:product_name])
+        if(new_product[:description] != nil && new_product[:description].length >= 3)
+          @product.update_attributes!(description: new_product[:description])
+        end
+         if(new_product[:pictures] != nil)
+          @product.update_attributes!(pics: new_product[:pictures])
+        end
+        if(new_product[:price] != nil && new_product[:price].length >= 1)
+          @product.update_attributes!(price: new_product[:price])
+        end
+        if(new_product[:tags] != nil)
+          @product.update_attributes!(tags: new_product[:tags])
+        end
+
+        #begin
+        #rescue StandardError => e
+        #  puts e.message
+        #  return
+        #end
         #flash[:notice] = "#{@product.productName} was successfully created."
         redirect_to product_index_path
       end
