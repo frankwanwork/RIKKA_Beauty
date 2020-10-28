@@ -56,7 +56,7 @@ class UsersController < ApplicationController
       return
     end
     
-    flash[:notice] = "#{@user.username} was successfully created."
+    # flash[:notice] = "#{@user.username} was successfully created."
     redirect_to signin_users_path # "sign in does not work"
   end
 
