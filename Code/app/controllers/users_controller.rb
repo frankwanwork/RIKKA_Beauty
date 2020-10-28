@@ -26,7 +26,8 @@ class UsersController < ApplicationController
       # flash[:notice] = ' user#{@user.username} logins in successfully!'
 
       # also did not redirect to the different page according to the user type
-      redirect_to user_path(:id => @user.id) # haven't created yet
+      #redirect_to user_path(:id => @user.id) # haven't created yet
+      redirect_to product_index_path
     else
       # flash[:notice] = ' the username or password is not correct'
       redirect_to signin_users_path
