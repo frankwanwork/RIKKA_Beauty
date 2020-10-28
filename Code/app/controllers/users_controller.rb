@@ -51,8 +51,8 @@ class UsersController < ApplicationController
     begin 
       @user = User.create!(new_user)
     rescue StandardError => e
-      flash[:warning] = "Email or Username already exists!"
-      puts e.message
+      #flash[:warning] = "Email or Username already exists!"
+      #puts e.message
       return
     end
     
