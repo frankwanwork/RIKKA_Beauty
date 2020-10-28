@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
-    #id = params[:id] # retrieve movie ID from URI route
-    #@movie = Movie.find(id) # look up movie by unique ID
+    id = params[:id] # retrieve movie ID from URI route
+    @user = User.find(id) # look up movie by unique ID
     # will render app/views/movies/show.<extension> by default
   end
 
@@ -23,15 +23,15 @@ class UsersController < ApplicationController
     if @user
       session[:username] = @user.username
       session[:usertype] = @user.user_type
-      flash[:notice] = ' user#{@user.username} logins in successfully!'
+      # flash[:notice] = ' user#{@user.username} logins in successfully!'
 
       # also did not redirect to the different page according to the user type
       redirect_to user_path(:id => @user.id) # haven't created yet
     else
-      flash[:notice] = ' the username or password is not correct'
-      #redirect_to signin_users_path
+      # flash[:notice] = ' the username or password is not correct'
+      redirect_to signin_users_path
     end
-    redirect_to root_path
+    # redirect_to root_path
   end
 
   def signup_show
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
       return
     end
     
-    flash[:notice] = "#{@user.username} was successfully created."
+    # flash[:notice] = "#{@user.username} was successfully created."
     redirect_to signin_users_path # "sign in does not work"
   end
 
