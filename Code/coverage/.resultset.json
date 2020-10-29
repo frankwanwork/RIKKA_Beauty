@@ -6,10 +6,10 @@
           1,
           null,
           1,
-          9,
-          9,
-          5,
-          5,
+          11,
+          11,
+          6,
+          6,
           null,
           null,
           null,
@@ -55,42 +55,43 @@
           1,
           2,
           2,
+          null,
           2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
           0,
           null,
           null,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
           null,
           null,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          0,
+          1,
           null,
           null,
           null,
@@ -99,7 +100,7 @@
           null,
           1,
           1,
-          2,
+          3,
           null,
           null,
           null
@@ -214,49 +215,49 @@
           null,
           1,
           null,
+          13,
+          null,
+          null,
+          1,
+          null,
+          5,
+          null,
+          5,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
           4,
           null,
           null,
+          null,
+          null,
           1,
+          null,
+          5,
+          null,
+          null,
+          1,
+          null,
+          2,
+          2,
+          0,
           null,
           2,
           null,
-          2,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
           null,
           2,
-          null,
-          null,
+          2,
+          1,
+          1,
           null,
           null,
           1,
-          null,
-          0,
-          null,
-          null,
-          1,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
           null,
           null,
           null,
@@ -301,7 +302,7 @@
           null,
           1,
           1,
-          0,
+          2,
           null,
           null,
           null
@@ -392,7 +393,7 @@
         }
       }
     },
-    "timestamp": 1603937951
+    "timestamp": 1604013921
   },
   "RSpec": {
     "coverage": {
@@ -468,8 +469,9 @@
           1,
           1,
           1,
+          null,
           1,
-          0,
+          1,
           null,
           null,
           null,
@@ -637,6 +639,29 @@
           null
         ]
       },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/models/picture.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/models/tag.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/ec2-user/environment/RIKKA_Beauty/Code/app/models/product.rb": {
         "lines": [
           1,
@@ -714,16 +739,6 @@
           null
         ]
       },
-      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/mailers/application_mailer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/home/ec2-user/environment/RIKKA_Beauty/Code/app/mailers/user_mailer.rb": {
         "lines": [
           0,
@@ -760,33 +775,14 @@
         "branches": {
         }
       },
-      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/models/tag.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/home/ec2-user/environment/RIKKA_Beauty/Code/app/models/resetpwd.rb": {
         "lines": [
           null
         ],
         "branches": {
         }
-      },
-      "/home/ec2-user/environment/RIKKA_Beauty/Code/app/models/picture.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          null,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1603937865
+    "timestamp": 1604014348
   }
 }

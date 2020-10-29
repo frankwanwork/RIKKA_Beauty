@@ -68,7 +68,7 @@ Scenario: edit the product to the dataset
   And I fill in "edit product name" with "new name"
   And I fill in "edit description" with "ddd"
   And I fill in "edit price" with "555"
-  And I attach "edit image" to "features/test_image/tmp2.png"
+  And I attach "edit image" to "features/test_image/tmp1.png"
   And I press "Update"
   And I follow "Products"
   
