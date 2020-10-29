@@ -3,25 +3,18 @@ Feature: allow the admin add or edit the product in the product page
   As an admin
   So that I can edit the product in the product page
   I want to add or edit the information in the product page
+  
+  Given the following users exist:
+  | username             | password  | user_type |
+  | admin                | pass      | 1         |
+  
 
 Background: an existing dataset with products and pictures
-
-  # Given the following products exist:
-  # | tagName   | tagName  | tagName   | tagName  | tagName   |
-  # | productName   | description  | tags   | pics  | price   |
-  # | name1         | desc1        | tag1   | pic1  | p1      |
-  # | name2         | desc2        | tag2   | pic2  | p2      |
   
-  # Given the following pictures exist:
-  # | productName   | description  | tags   | pics  | price   |
-  # | name1         | desc1        | tag1   | pic1  | p1      |
-  # | name2         | desc2        | tag2   | pic2  | p2      |
-  
-  # And I am on the Rikka product page
-
 Scenario: check the existing product on the product page
   When I am on the Rikka product page
-  Then I should see "Product 1"
+  Then I follow "Products"
+  And I should see "Product 1"
   And I should see "Product 2"
   And I should see "Product 3"
   And I should see "Product 4"
@@ -32,28 +25,60 @@ Scenario: check the existing product on the product page
   And I should see "Almond"
   And I should see "Stiletto"
   And I should see "Oval"
-#   And I fill in "username" with "ec2-user"
-#   And I fill in "password" with "rikka"
-#   And I press "Log In"
-#   Then I should not be on the Rikka home page
-#   And I should see "logins in successfully"
 
 Scenario: add the product to the dataset
-  When I am on the Rikka product page
-  And I press "Edit"
+  When I am on the Rikka signin page
+  And I fill in "username" with "admin"
+  And I fill in "password" with "pass"
+  And I press "Sign In"
+  Then I follow "Products"
+  And I should be on the Rikka product page
+  And I follow "Add New"
+  And I fill in "new product name" with "new name"
+  And I fill in "new description" with "new desc"
+  And I fill in "new price" with "30"
+  And I attach "new image" to "features/test_image/tmp1.png"
+  And I press "Add"
+  And I follow "Products"
+  Then I should see "new name"
+  And I should see "new desc"
+  And I should see "Price: $ 30"
+
+Scenario: edit the product to the dataset
+  When I am on the Rikka signin page
+  And I fill in "username" with "admin"
+  And I fill in "password" with "pass"
+  And I press "Sign In"
   
-# Scenario: sign in with the wrong username
-#   When I am on the Rikka home page
-#   And I fill in "username" with "ec2-use"
-#   And I fill in "password" with "rikka"
-#   And I press "Log In"
-#   Then I should be on the Rikka home page
-#   And I should see "the username or password is not correct"
+  Then I follow "Products"
+  And I should be on the Rikka product page
+  And I follow "Add New"
+  And I fill in "new product name" with "new name"
+  And I fill in "new description" with "new desc"
+  And I fill in "new price" with "30"
+  And I attach "new image" to "features/test_image/tmp1.png"
+  And I press "Add"
   
-# Scenario: sign in with the wrong password
-#   When I am on the Rikka home page
-#   And I fill in "username" with "ec2-use"
-#   And I fill in "password" with "rikk"
-#   And I press "Log In"
-#   Then I should be on the Rikka home page
-#   And I should see "the username or password is not correct"
+  And I follow "Products"
+  Then I should see "new name"
+  And I should see "new desc"
+  And I should see "Price: $ 30"
+  
+  Then I follow "Edit"
+  And I fill in "edit product name" with "new name"
+  And I fill in "edit description" with "ddd"
+  And I fill in "edit price" with "555"
+  And I attach "edit image" to "features/test_image/tmp2.png"
+  And I press "Update"
+  And I follow "Products"
+  
+  Then I should see "new name"
+  And I should not see "new desc"
+  And I should not see "Price: $ 30"
+  And I should see "ddd"
+  And I should see "Price: $ 555"
+  
+  
+  
+  
+  

@@ -52,6 +52,10 @@ When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
   fill_in(field, :with => value)
 end
 
+When /^(?:|I )follow "([^"]*)"$/ do |link|
+  click_link(link)
+end
+
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   current_path = URI.parse(current_url).path
   if current_path.respond_to? :should
@@ -78,5 +82,11 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
-
+Then /^(?:|I )should not see "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should_not have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end
 

@@ -47,19 +47,19 @@
       <%= form_for:product, url: add_product_index_path do |f| %>
       <p>
         <%= f.label :Product_Name %><br>
-        <%= f.text_field :product_name %>
+        <%= f.text_field :product_name, id:"new product name" %>
       </p>
       <p>
         <%= f.label :Description %><br>
-        <%= f.text_field :description %>
+        <%= f.text_field :description, id:"new description" %>
       </p>
       <p>
         <%= f.label :Picture_Upload %><br>
-        <%= f.file_field :image %>
+        <%= f.file_field :image, id:"new image" %>
       </p>
       <p>
         <%= f.label :Price %><br>
-        <%= f.text_field :price %>
+        <%= f.text_field :price, id:"new price" %>
       </p>
       
       <p>

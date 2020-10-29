@@ -16,8 +16,8 @@ Scenario: sign in with the correct username and password
   When I am on the Rikka signin page
   And I fill in "username" with "ec2-user"
   And I fill in "password" with "rikka"
-  And I press "Log In"
-  Then I should not be on the Rikka default page
+  And I press "Sign In"
+  Then I should not be on the Rikka signin page
   # And I should see "logins in successfully"
   
   
@@ -25,14 +25,14 @@ Scenario: sign in with the wrong username
   When I am on the Rikka signin page
   And I fill in "username" with "ec2-use"
   And I fill in "password" with "rikka"
-  And I press "Log In"
-  Then I should be on the Rikka default page
+  And I press "Sign In"
+  Then I should be on the Rikka signin page
   # And I should see "the username or password is not correct"
   
 Scenario: sign in with the wrong password
   When I am on the Rikka signin page
   And I fill in "username" with "ec2-use"
   And I fill in "password" with "rikk"
-  And I press "Log In"
-  Then I should be on the Rikka default page
+  And I press "Sign In"
+  Then I should be on the Rikka signin page
   # And I should see "the username or password is not correct"
