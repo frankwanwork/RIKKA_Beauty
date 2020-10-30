@@ -17,5 +17,5 @@
 
 
 
-console.log('Hello World from application js')
+console.log('Hello World application js')
 // import 'stylesheets/site.scss'
