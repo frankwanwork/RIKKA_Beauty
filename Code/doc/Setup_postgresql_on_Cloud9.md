@@ -15,11 +15,10 @@ sudo service postgresql start
 bundle install --without production
 
 ```
-## Setup Webpacker
-```
-npm install -g yarn
-bundle exec rails webpacker:install
-```
+
+<!--```-->
+<!--npm install -g yarn-->
+<!--```-->
 
 ## Setup postgresql
 ```
