@@ -1,6 +1,6 @@
-Feature: allow the admin add or edit the product in the product page
+Feature: allow the valid user add or edit the product in the product page
  
-  As an admin
+  As an valid user
   So that I can edit the product in the product page
   I want to add or edit the information in the product page
   
@@ -44,12 +44,11 @@ Scenario: add the product to the dataset
   And I should see "new desc"
   And I should see "Price: $ 30"
 
-Scenario: edit the product to the dataset
+Scenario: add a new product and then edit the added product
   When I am on the Rikka signin page
   And I fill in "username" with "admin"
   And I fill in "password" with "pass"
   And I press "Sign In"
-  
   Then I follow "Products"
   And I should be on the Rikka product page
   And I follow "Add New"
@@ -58,12 +57,10 @@ Scenario: edit the product to the dataset
   And I fill in "new price" with "30"
   And I attach "new image" to "features/test_image/tmp1.png"
   And I press "Add"
-  
   And I follow "Products"
   Then I should see "new name"
   And I should see "new desc"
   And I should see "Price: $ 30"
-  
   Then I follow "Edit"
   And I fill in "edit product name" with "new name"
   And I fill in "edit description" with "ddd"
@@ -71,7 +68,6 @@ Scenario: edit the product to the dataset
   And I attach "edit image" to "features/test_image/tmp1.png"
   And I press "Update"
   And I follow "Products"
-  
   Then I should see "new name"
   And I should not see "new desc"
   And I should not see "Price: $ 30"
@@ -79,6 +75,25 @@ Scenario: edit the product to the dataset
   And I should see "Price: $ 555"
   
   
-  
-  
+Scenario: add the product with the same name, then the product should not be added and stays at the adding page
+  When I am on the Rikka signin page
+  And I fill in "username" with "admin"
+  And I fill in "password" with "pass"
+  And I press "Sign In"
+  Then I follow "Products"
+  And I should be on the Rikka product page
+  And I follow "Add New"
+  And I fill in "new product name" with "new name"
+  And I fill in "new description" with "new desc"
+  And I fill in "new price" with "30"
+  And I attach "new image" to "features/test_image/tmp1.png"
+  And I press "Add"
+  Then I should be on the Rikka product page
+  And I follow "Add New"
+  And I fill in "new product name" with "new name"
+  And I fill in "new description" with "new desc"
+  And I fill in "new price" with "30"
+  And I attach "new image" to "features/test_image/tmp1.png"
+  And I press "Add"
+  Then I should be on the Rikka add page
   

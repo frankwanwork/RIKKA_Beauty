@@ -16995,3 +16995,1029 @@ Redirected to http://test.host/users/signin
 Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:10:56 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 4980ms (Views: 4964.1ms | ActiveRecord: 0.9ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (84.6ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.5ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000000098c30d0 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12523-1jvx96f.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:01.434051"], ["updated_at", "2020-10-30 01:11:01.434051"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "80"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 21ms (ActiveRecord: 6.4ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x000000000ad58928 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12523-7k6loy.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:01.696856"], ["updated_at", "2020-10-30 01:11:01.696856"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "81"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (183.7ms)
+Completed 200 OK in 186ms (Views: 184.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/edit" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#edit as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+Started POST "/product/edit" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#edit as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"ddd", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000007ea6ff8 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12523-b7ukoh.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"555"}, "commit"=>"Update"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:01.989274"], ["updated_at", "2020-10-30 01:11:01.989274"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."productName" = $1 LIMIT 1  [["productName", "new name"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "description" = $1 WHERE "products"."id" = $2  [["description", "ddd"], ["id", 78]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "products" SET "pics" = $1 WHERE "products"."id" = $2[0m  [["pics", "82"], ["id", 78]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "products" SET "price" = $1 WHERE "products"."id" = $2  [["price", "555"], ["id", 78]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 9ms (ActiveRecord: 1.9ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:01 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:02 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:02 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:02 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:02 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:02 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:11:02 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:11:02 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000009035008 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12523-p6fnqn.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:02.260270"], ["updated_at", "2020-10-30 01:11:02.260270"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "83"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:02 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:49 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 287ms (Views: 270.0ms | ActiveRecord: 0.9ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:49 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:49 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 0.9ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000000067c4ce0 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12579-143xtfx.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:50.187901"], ["updated_at", "2020-10-30 01:11:50.187901"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "84"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 19ms (ActiveRecord: 5.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.1ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000007356bf8 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12579-1lgr9hb.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:50.459813"], ["updated_at", "2020-10-30 01:11:50.459813"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "85"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (66.3ms)
+Completed 200 OK in 72ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.3ms)
+Started GET "/product/edit" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#edit as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/edit.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+Started POST "/product/edit" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#edit as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"ddd", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000000073a96a0 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12579-10ythx3.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"555"}, "commit"=>"Update"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:50.704545"], ["updated_at", "2020-10-30 01:11:50.704545"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."productName" = $1 LIMIT 1  [["productName", "new name"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "description" = $1 WHERE "products"."id" = $2  [["description", "ddd"], ["id", 81]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "products" SET "pics" = $1 WHERE "products"."id" = $2[0m  [["pics", "86"], ["id", 81]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "price" = $1 WHERE "products"."id" = $2  [["price", "555"], ["id", 81]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 13ms (ActiveRecord: 3.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000006fdc9a0 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12579-nahqna.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:50.993212"], ["updated_at", "2020-10-30 01:11:50.993212"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "87"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:11:50 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:11:51 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:11:51 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x000000000737be08 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12579-dtdgev.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:11:51.076331"], ["updated_at", "2020-10-30 01:11:51.076331"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "88"]]
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 273ms (Views: 256.0ms | ActiveRecord: 0.9ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.9ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000000078183d0 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12631-1ds0jyc.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:12:55.859614"], ["updated_at", "2020-10-30 01:12:55.859614"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "89"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 19ms (ActiveRecord: 5.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:55 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000004e7b658 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12631-1etvwpb.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:12:56.132385"], ["updated_at", "2020-10-30 01:12:56.132385"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "90"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/edit" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#edit as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/edit.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+Started POST "/product/edit" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#edit as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"ddd", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000008527d78 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12631-10il87t.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"555"}, "commit"=>"Update"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:12:56.357096"], ["updated_at", "2020-10-30 01:12:56.357096"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."productName" = $1 LIMIT 1  [["productName", "new name"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "description" = $1 WHERE "products"."id" = $2  [["description", "ddd"], ["id", 85]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "pics" = $1 WHERE "products"."id" = $2[0m  [["pics", "91"], ["id", 85]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "price" = $1 WHERE "products"."id" = $2  [["price", "555"], ["id", 85]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 17ms (ActiveRecord: 2.0ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (74.1ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.6ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"admin", "password"=>"pass"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "admin"], ["password", "pass"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000007e2c578 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12631-j15fsp.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:12:56.651869"], ["updated_at", "2020-10-30 01:12:56.651869"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "92"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#show as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.2ms)
+Started GET "/product/add" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#add as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+Started POST "/product/add" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#add as HTML
+  Parameters: {"utf8"=>"✓", "product"=>{"product_name"=>"new name", "description"=>"new desc", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000008517c70 @tempfile=#<Tempfile:/tmp/RackMultipart20201030-12631-1e19shj.png>, @original_filename="tmp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"tmp1.png\"\r\nContent-Type: image/png\r\nContent-Length: 18255\r\n">, "price"=>"30"}, "commit"=>"Add"}
+Unpermitted parameter: image
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "pictures" ("data", "pic_type", "filename", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["data", "<18255 bytes of binary data>"], ["pic_type", "image/png"], ["filename", "tmp1.png"], ["created_at", "2020-10-30 01:12:56.737139"], ["updated_at", "2020-10-30 01:12:56.737139"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "products" ("productName", "description", "price", "pics") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["productName", "new name"], ["description", "new desc"], ["price", "30"], ["pics", "93"]]
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/add.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-user", "password"=>"rikka"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-user"], ["password", "rikka"]]
+Redirected to http://www.example.com/product/show
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/product/show" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by ProductController#show as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered product/show.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikka"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1[0m  [["username", "ec2-use"], ["password", "rikka"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gamil.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+Started POST "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"ec2-use", "password"=>"rikk"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT 1  [["username", "ec2-use"], ["password", "rikk"]]
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/signin_show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-30 01:12:56 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-30 01:12:57 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 12ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-30 01:12:57 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"new-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"  [["username", "new-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/signin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/users/signin" for 127.0.0.1 at 2020-10-30 01:12:57 +0000
+Processing by UsersController#signin_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/signin_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "password", "email") VALUES ($1, $2, $3) RETURNING "id"  [["username", "ec2-user"], ["password", "rikka"], ["email", "email_0_@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-30 01:12:57 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-30 01:12:57 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+Started POST "/users/signup" for 127.0.0.1 at 2020-10-30 01:12:57 +0000
+Processing by UsersController#signup as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"ec2-user", "emai"=>"email_1_@gmail.com", "phone_number"=>"", "password"=>"rikka", "password_confirmation"=>"rikka", "security_code"=>""}, "commit"=>"Sign Up"}
+Unpermitted parameters: first_name, last_name, emai, phone_number, password_confirmation
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("username", "password", "user_type") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "ec2-user"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/signup
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+Started GET "/users/signup" for 127.0.0.1 at 2020-10-30 01:12:57 +0000
+Processing by UsersController#signup_show as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered users/signup_show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#signup as HTML
+  Parameters: {"user"=>{"username"=>"new-user-1", "password"=>"rikka", "email"=>"email_1_@gmail.com"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "username", "password", "user_type") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "email_1_@gmail.com"], ["username", "new-user-1"], ["password", "rikka"], ["user_type", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/users/signin
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
