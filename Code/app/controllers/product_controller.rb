@@ -30,22 +30,20 @@ class ProductController < ApplicationController
          begin
            @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: new_product[:pictures])
          rescue StandardError => e
-           flash[:warning] = "Product already exists!"
-           puts e.message
            return
          end
-         flash[:notice] = "#{@product.productName} was successfully created."
+         # flash[:notice] = "#{@product.productName} was successfully created."
          redirect_to product_index_path
        end
     end
   end
 
-  def search
-    @product = Product.all
-    @pics = Picture.all
-    puts @product
-    puts @pics
-  end
+  #def search
+  #  @product = Product.all
+  #  @pics = Picture.all
+  #  puts @product
+  #  puts @pics
+  #end
 
   def edit
     puts session[:username]
@@ -77,19 +75,11 @@ class ProductController < ApplicationController
           @product.update_attributes!(price: new_product[:price])
         end
         if(new_product[:tags] != nil)
-          @product.update_attributes!(tags: new_product[:tags])
+          #@product.update_attributes!(tags: new_product[:tags])
         end
 
-        #begin
-        #rescue StandardError => e
-        #  puts e.message
-        #  return
-        #end
-        #flash[:notice] = "#{@product.productName} was successfully created."
         redirect_to product_index_path
       end
-    else
-      #flash[:notice] = "Operation denied."
     end
   end
 
