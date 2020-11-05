@@ -38,13 +38,6 @@ class ProductController < ApplicationController
     end
   end
 
-  #def search
-  #  @product = Product.all
-  #  @pics = Picture.all
-  #  puts @product
-  #  puts @pics
-  #end
-
   def edit
     puts session[:username]
     puts session[:usertype]
@@ -81,6 +74,11 @@ class ProductController < ApplicationController
         redirect_to product_index_path
       end
     end
+  end
+  
+  def search
+    temp = params[:product_name]
+    @product = Product.where("productName ilike ?",'%' + temp + '%' )
   end
 
   private
