@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
     validates :productName, presence: true
     
     mount_uploader :image, ImageUploader
+    acts_as_taggable_on :tags
 end
 
 class Picture < ActiveRecord::Base
