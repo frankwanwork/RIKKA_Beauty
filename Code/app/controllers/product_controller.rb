@@ -28,7 +28,7 @@ class ProductController < ApplicationController
 
          new_product[:pictures] = @picture.id
          begin
-           @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], tags: new_product[:tags], price: new_product[:price], pics: new_product[:pictures])
+           @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], price: new_product[:price], pics: new_product[:pictures])
          rescue StandardError => e
            return
          end
@@ -67,9 +67,6 @@ class ProductController < ApplicationController
         if(new_product[:price] != nil && new_product[:price].length >= 1)
           @product.update_attributes!(price: new_product[:price])
         end
-        if(new_product[:tags] != nil)
-          #@product.update_attributes!(tags: new_product[:tags])
-        end
 
         redirect_to product_index_path
       end
@@ -83,7 +80,7 @@ class ProductController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:product_name, :description, :tags, :price)
+    params.require(:product).permit(:product_name, :description, :price)
   end
 
 end
