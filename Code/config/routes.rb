@@ -21,6 +21,8 @@ Rails.application.routes.draw do
       match 'edit', to: 'product#edit', via: [:get, :post]
       match 'add', to: 'product#add', via: [:get, :post]
       match 'pic/:id', to: 'product#pic', via: [:get]
+      match 'tagged', to: 'product#tagged', via: [:post]
+      match 'search', to: 'product#search', via: [:post]
     end
   end
   
