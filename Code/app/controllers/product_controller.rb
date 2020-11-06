@@ -29,6 +29,8 @@ class ProductController < ApplicationController
          new_product[:pictures] = @picture.id
          begin
            @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], price: new_product[:price], pics: new_product[:pictures])
+           #@product.tag_list.add("awesome", "slick")
+           #@product.save
          rescue StandardError => e
            return
          end
@@ -76,6 +78,14 @@ class ProductController < ApplicationController
   def search
     temp = params[:product_name]
     @product = Product.where("productName ilike ?",'%' + temp + '%' )
+  end
+  
+  def tagged
+    if params[:tag].present?
+      @product = Product.tagged_with(params[:tag])
+    else
+     @product = Product.all
+    end
   end
 
   private
