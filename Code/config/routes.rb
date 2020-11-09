@@ -44,6 +44,7 @@ Rails.application.routes.draw do
       match 'forgot', to: 'users#forgot_show', via: [:post]
       match 'forgot', to: 'users#forgot', via: [:get]
       match 'send_code', to: 'users#send_code', via: [:get]
+      get 'search'
     end
   end
 

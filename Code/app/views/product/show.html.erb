@@ -46,13 +46,10 @@
    
 
   
-
-    <%= form_for:product, url: product_index_path do |f| %>
-    <p>
-        <%= f.text_field :product_name %>
-        <%= f.submit "Search"%>
-
-    </p>
+    <h6> Search by product name: </h6>
+    <%= form_tag(product_index_path, method: :get) do %>
+        <%= text_field_tag(:product_name, params[:product_name]) %>
+        <%= submit_tag ("Search") %>
     <% end %>
 
    
@@ -99,7 +96,7 @@
       <ul>
           <li>
               &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-              <td><%= product.productName %> </td>
+              <td><%= product.productname %> </td>
           </li>
           <li>
               &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
