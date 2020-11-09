@@ -7,7 +7,13 @@ class ProductController < ApplicationController
   def show
     
     @products = Product.search(params[:product_name])
-
+    @products.each do |product|
+      if product.pics.nil?
+        return
+      else
+        product.pics = "product/pic/" + product.pics
+      end
+    end
   end
   
 
@@ -86,5 +92,6 @@ class ProductController < ApplicationController
      @product = Product.all
     end
   end
+
 
 end
