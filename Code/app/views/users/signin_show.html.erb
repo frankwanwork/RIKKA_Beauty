@@ -56,14 +56,14 @@
     <%= f.submit "Sign In"%>
   </p>
   
-  <!--<% @users.each do |user| %>-->
-  <!--  <tr>-->
-  <!--    <p> Name </p>-->
-  <!--    <td><%= user.username %></td>-->
-  <!--    <p> Password </p>-->
-  <!--    <td><%= user.password %></td>-->
-  <!--  </tr>-->
-  <!--<% end %>  -->
+  <% @users.each do |user| %>
+    <tr>
+      <p> Name </p>
+      <td><%= user.username %></td>
+      <p> Password </p>
+      <td><%= user.password %></td>
+    </tr>
+  <% end %>  
   
   
   
