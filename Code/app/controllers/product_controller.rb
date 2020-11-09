@@ -1,18 +1,32 @@
 class ProductController < ApplicationController
 
+  def product_params
+    params.require(:product).permit(:product_name, :description, :price, :tag_list)
+  end
+  
   def show
-    @products = Product.all
-    @products.each do |product|
-      if product.pics.nil?
-        return
-      else
-      product.pics = "product/pic/" + product.pics
-      puts product.pics
+    case request.method_symbol
+    when :get
+      @products = Product.all
+      @products.each do |product|
+        if product.pics.nil?
+          return
+        else
+         product.pics = "product/pic/" + product.pics
+          puts product.pics
+        end
       end
+      
+    when :post
+      if params[:commit] =="Search" 
+        puts "enter search"
+      # @product = Product.wher e("productName ilike ?","%#{params[:product_name]}%" )
+        puts params.require(:product)[:product_name]
+        temp = params.require(:product)[:product_name]
+       @product = Product.find_by(productName: temp)
+      end 
     end
-    
-    #temp = params[:product_name]
-    #@product = Product.where("productName ilike ?","%#{params[:product_name]}%" )
+
   end
 
   def pic
@@ -37,6 +51,7 @@ class ProductController < ApplicationController
       
       begin
         @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], price: new_product[:price], pics: new_product[:pictures])
+       # puts @product.productName
         redirect_to product_index_path
       rescue StandardError => e
         return
@@ -84,7 +99,17 @@ end
     #@product = User.find_by(productName: params.require(:product)[:product_name]
     #redirect_to product_index_path
     #temp = params[:product_name]
-    #@product = Product.where("productName ilike ?","%#{params[:product_name]}%" )
+  #   @products = Product.all
+  #   @products.each do |product|
+  #     puts product.productName
+  #   end
+  # puts 111
+  # puts  params.require(:product)[:product_name]
+   puts params[:commit]
+   redirect_to product_index_path 
+  #redirect_to product_index_path(Product.where("productName ilike ?","%#{params[:product_name]}%" ))
+   # @product = Product.where("productName ilike ?","%#{params.require(:product)[:product_name]}%" )
+   # puts  @product
   end 
   
   def tagged
@@ -95,9 +120,6 @@ end
     end
   end
 
-  private
-  def product_params
-    params.require(:product).permit(:product_name, :description, :price, :tag_list)
-  end
+
 
 end

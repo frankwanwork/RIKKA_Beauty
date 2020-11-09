@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   #   resources :products
   resources :product do
     collection do
-      match 'show', to: 'product#show', via: [:get]
+      match 'show', to: 'product#show', via: [:get, :post]
       match 'search', to: 'product#search', via: [:get]
       match 'edit', to: 'product#edit', via: [:get, :post]
       match 'add', to: 'product#add', via: [:get, :post]

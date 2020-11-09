@@ -45,13 +45,9 @@
     <li><%= link_to 'Edit', edit_product_index_path %></li>   <br> <br> 
    
 
-    <div id="tag_cloud">
-        <% tag_cloud Product.tag_counts, %w[s,m,l] do |tag, css_class| %>
-            <%= link_to tag.name, tag_path(tag.name), class: css_class%>
-        <% end %>
-    <div>
+  
 
-    <%= form_for:product, url: search_product_index_path do |f| %>
+    <%= form_for:product, url: product_index_path do |f| %>
     <p>
         <%= f.text_field :product_name %>
         <%= f.submit "Search"%>
