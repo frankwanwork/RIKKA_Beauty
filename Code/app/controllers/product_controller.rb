@@ -3,9 +3,16 @@ class ProductController < ApplicationController
   def show
     @products = Product.all
     @products.each do |product|
+      if product.pics.nil?
+        return
+      else
       product.pics = "product/pic/" + product.pics
       puts product.pics
+      end
     end
+    
+    #temp = params[:product_name]
+    #@product = Product.where("productName ilike ?","%#{params[:product_name]}%" )
   end
 
   def pic
@@ -25,20 +32,18 @@ class ProductController < ApplicationController
          @picture.pic_type = params.require(:product)[:image].content_type
          @picture.filename = params.require(:product)[:image].original_filename
          @picture.save
-
          new_product[:pictures] = @picture.id
-         begin
-           @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], price: new_product[:price], pics: new_product[:pictures])
-           #@product.tag_list.add("awesome", "slick")
-           #@product.save
-         rescue StandardError => e
-           return
-         end
+      end
+      
+      begin
+        @product = Product.create!(productName: new_product[:product_name], description: new_product[:description], price: new_product[:price], pics: new_product[:pictures])
+        redirect_to product_index_path
+      rescue StandardError => e
+        return
+      end
          # flash[:notice] = "#{@product.productName} was successfully created."
-         redirect_to product_index_path
-       end
-    end
   end
+end
 
   def edit
     puts session[:username]
@@ -76,9 +81,11 @@ class ProductController < ApplicationController
   end
   
   def search
-    temp = params[:product_name]
-    @product = Product.where("productName ilike ?",'%' + temp + '%' )
-  end
+    #@product = User.find_by(productName: params.require(:product)[:product_name]
+    #redirect_to product_index_path
+    #temp = params[:product_name]
+    #@product = Product.where("productName ilike ?","%#{params[:product_name]}%" )
+  end 
   
   def tagged
     if params[:tag].present?
