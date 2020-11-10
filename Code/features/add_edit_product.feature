@@ -88,7 +88,8 @@ Scenario: add the product with the same name, then the product should not be add
   And I fill in "new price" with "30"
   And I attach "new image" to "features/test_image/tmp1.png"
   And I press "Add"
-  Then I should be on the Rikka product page
+  # Then I should be on the Rikka product page
+  And I follow "Products"
   And I follow "Add New"
   And I fill in "new product name" with "new name"
   And I fill in "new description" with "new desc"

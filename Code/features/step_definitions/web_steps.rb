@@ -89,4 +89,3 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
     assert page.has_content?(text)
   end
 end
-
