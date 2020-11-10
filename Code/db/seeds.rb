@@ -6,14 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-tags = [{:tagName => 'Winter Warm'},
-    	  {:tagName => 'Summer Shining'},
-    	  {:tagName => 'French'},
-    	  {:tagName => 'Fall is coming'},
-    	  {:tagName => 'Chic'},
-    	  {:tagName => 'Modern'},
-    	  {:tagName => 'Drak'},
-    	  {:tagName => 'Pink'}
+tags = [{:name => 'Winter Warm'},
+    	  {:name => 'Summer Shining'},
+    	  {:name => 'French'},
+    	  {:name => 'Fall is coming'},
+    	  {:name => 'Chic'},
+    	  {:name => 'Modern'},
+    	  {:name => 'Drak'},
+    	  {:name => 'Pink'}
   	 ]
 
 users = [{:email => 'test@tamu.edu', :username => 'admin', :password => 'pass', :user_type => 1, :lastname => 'Bill', :firstname => 'Gates', :phone => '9799859999'}]

@@ -9,7 +9,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo"> <a href="index.html">
-                                  <%= image_pack_tag 'logo.jpg'%>
+                                  <%= image_tag 'logo.jpg'%>
                                   </a> 
                                 </div>
                             </div>
@@ -53,6 +53,10 @@
         <%= f.label :Description %><br>
         <%= f.text_field :description, id:"new description" %>
       </p>
+      <p>
+        <%= f.label :tag_list, "Tags (seperate by comma)" %><br>
+        <%= f.text_field :tag_list %>
+      </p>      
       <p>
         <%= f.label :Picture_Upload %><br>
         <%= f.file_field :image, id:"new image" %>

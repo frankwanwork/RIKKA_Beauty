@@ -9,7 +9,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo"> <a href="index.html">
-                                  <%= image_pack_tag 'logo.jpg'%>
+                                  <%= image_tag 'logo.jpg'%>
                                   </a> 
                                 </div>
                             </div>
@@ -44,11 +44,23 @@
     <li><%= link_to 'Add New', add_product_index_path %></li>  
     <li><%= link_to 'Edit', edit_product_index_path %></li>   <br> <br> 
    
+
+  
+    <h6> Search by product name: </h6>
+    <%= form_tag(product_index_path, method: :get) do %>
+        <%= text_field_tag(:product_name, params[:product_name]) %>
+        <%= submit_tag ("Search") %>
+    <% end %>
+
+   
+   
+   
+   
     &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-    <%= image_pack_tag '0283.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-    <%= image_pack_tag '0294.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-    <%= image_pack_tag '0295.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-    <%= image_pack_tag '0514.jpg', width: '400px' %> <br>  
+    <%= image_tag '0283.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <%= image_tag '0294.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <%= image_tag '0295.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    <%= image_tag '0514.jpg', width: '400px' %> <br>  
 
     <ul>
         <li>
@@ -84,7 +96,7 @@
       <ul>
           <li>
               &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-              <td><%= product.productName %> </td>
+              <td><%= product.productname %> </td>
           </li>
           <li>
               &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -92,6 +104,9 @@
               <td><%= product.price %> </td>
               
           </li>  
+          <p>
+              Tags: <%= product.tag_list %>  
+          </p>
           <li>
               &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
               Description: 

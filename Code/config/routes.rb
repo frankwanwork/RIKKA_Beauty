@@ -16,11 +16,14 @@ Rails.application.routes.draw do
   #   resources :products
   resources :product do
     collection do
-      match 'show', to: 'product#show', via: [:get]
+      match 'show', to: 'product#show', via: [:get, :post]
       match 'search', to: 'product#search', via: [:get]
       match 'edit', to: 'product#edit', via: [:get, :post]
       match 'add', to: 'product#add', via: [:get, :post]
       match 'pic/:id', to: 'product#pic', via: [:get]
+      match 'tagged', to: 'product#tagged', via: [:post]
+      match 'search', to: 'product#search', via: [:post]
+      get 'search'
     end
   end
   
@@ -42,6 +45,7 @@ Rails.application.routes.draw do
       match 'forgot', to: 'users#forgot_show', via: [:post]
       match 'forgot', to: 'users#forgot', via: [:get]
       match 'send_code', to: 'users#send_code', via: [:get]
+      
     end
   end
 
