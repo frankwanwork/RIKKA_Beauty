@@ -16,12 +16,19 @@ tags = [{:name => 'Winter Warm'},
     	  {:name => 'Pink'}
   	 ]
 
+appointments =[{:appt_date => "Sat, 14 Nov 2020", :timeslot => '14:00', :user_name => 'admin', :user_tele => '9799859999',:user_email => 'test@tamu.edu'}]
+
 users = [{:email => 'test@tamu.edu', :username => 'admin', :password => 'pass', :user_type => 1, :lastname => 'Bill', :firstname => 'Gates', :phone => '9799859999'}]
 
-tags.each do |tag|
-  Tag.create!(tag)
-end
 
-users.each do |user|
-  User.create!(user)
+# tags.each do |tag|
+#   Tag.create!(tag)
+# end
+
+# users.each do |user|
+#   User.create!(user)
+# end
+
+appointments.each do |user|
+  Appointment.create!(user)
 end
