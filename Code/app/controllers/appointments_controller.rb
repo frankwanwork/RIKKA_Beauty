@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
   
   def appointment_params
-    params.require(:appointment).permit(:appointment_date, :timeslot, :phone, :email)
+    params.require(:appointments).permit("appt_date(1i)", "appt_date(2i)", "appt_date(3i)", :timeslot, :user_tele, :user_email)
   end
   
   def show
@@ -12,6 +12,7 @@ class AppointmentsController < ApplicationController
     case request.method_symbol
     when :get
       @appointments = Appointment.all
+      puts @appointments
       return
     # date : 2012/12/13 -> date: Thu, 13 Dec 2012
     #if params[:appt_date2].nil? 
@@ -33,13 +34,21 @@ class AppointmentsController < ApplicationController
       return
     end
 
-    new_appointmt = appointment_params
-    new_appointmt[:appt_date] = new_appointmt[:appointment_date].to_date
-    new_appointmt[:user_tele] = new_appointmt[:phone]
-    new_appointmt[:user_email] = new_appointmt[:email]
-    new_appointmt[:user_name] = session[:username]
-    @appointmt = Appointment.create!(new_appointmt.except(:appointment_date, :phone, :email))
-    redirect_to appointments_path
+    case request.method_symbol
+    when :get
+      return
+
+    when :post
+      puts params
+
+      new_appointmt = appointment_params
+      new_appointmt[:appt_date] = Date.new(new_appointmt["appt_date(1i)"].to_i,
+					new_appointmt["appt_date(2i)"].to_i,
+					new_appointmt["appt_date(3i)"].to_i)
+      new_appointmt[:user_name] = session[:username]
+      @appointmt = Appointment.create!(new_appointmt.except(:appointment_date, :phone, :email))
+      redirect_to appointments_path
+    end
   end
 
   def edit
