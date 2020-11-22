@@ -47,23 +47,27 @@
 
   <table width="90%" border="1" class="t1">
     <thead>
+        <th width="10%"> ID </th>
         <th width="20%"> Date </th>
         <th width="20%"> TimeSlot </th>
         <th width="10%"> User </th>
         <th width="20%"> Email </th>
-        <th width="20%"> Phone </th>
+        <th width="10%"> Phone </th>
         <th width="10%"> Action </th>
     </thead>
     
     <tbody>
+        <% @appointments.each do |appointments| %>
         <tr>
-            <td> 11/01/2020 </td>
-            <td> 10:00 </td>
-            <td> yao </td>
-            <td> 9799854028 </td>
-            <td> test@gmail.com </td>
-            <td> <%= link_to "Delete", drop_appointments_path %></td>
+            <td> <%= appointments.id %> </td>
+            <td> <%= appointments.appt_date %> </td>
+            <td> <%= appointments.timeslot %></td>
+            <td> <%= appointments.user_name  %> </td>
+            <td> <%= appointments.user_email  %> </td>
+            <td> <%= appointments.user_tele %> </td>
+           <td>  <%= button_to "Delete", {action: "drop", id: appointments.id}, method: :drop, data: { confirm: "Are you sure?" } %> </td>
         </tr>
+        <% end %>  
     </tbody>
 
     
