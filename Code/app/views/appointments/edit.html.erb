@@ -1,0 +1,73 @@
+<body class="main-layout">
+
+
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a href="index.html">
+                                  <%= image_tag 'logo.jpg'%>
+                                  </a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li><%= link_to 'Home', root_path %></li>
+                                        <li><%= link_to 'Log In', signin_users_path %></li>
+                                        <li><%= link_to 'Products', product_index_path %></li>
+                                        <li><%= link_to 'Appointment',appointments_path %></li>
+                                        
+                                        <!--<li> <a href="meet.html"> Product </a> </li>-->
+                                        <!--<li> <a href="whatwedo.html"> Appointment </a> </li>-->
+                                        <!--<li> <a href="contact.html">Contact us</a> </li>-->
+                                        <!--<li class="mean-last"> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li>-->
+                                        <!--<li class="mean-last"> <a href="#"><img src="images/top-icon.png" alt="#" /></a> </li>-->
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <center>
+
+    <h1>Edit appointment information</h1> 
+    
+      <%= form_for:appointments, url: edit_appointments_path do |f| %>
+      <p>
+        <%= f.label :ID%><br>
+        <%= f.text_field :id %>
+      </p> 
+      <p>
+        <%= f.label :Appointment_Time %><br>
+        <%= f.date_select :appt_date %><br>
+      </p>
+      <p>
+        <%= f.label :TimeSlot %><br>
+        <%= f.select :timeslot, [ '10:00','14:00','16:00' ], :prompt => 'Select One' %>
+      </p>
+      <p>
+        <%= f.label :Phone_Number %><br>
+        <%= f.text_field :user_tele %>
+      </p>      
+      <p>
+        <%= f.label :Email %><br>
+        <%= f.text_field  :user_email %>
+      </p> <br>
+      <p>
+        <%= f.submit "Submit"%>
+      </p>
+      <% end %>
+  
+  </center>
