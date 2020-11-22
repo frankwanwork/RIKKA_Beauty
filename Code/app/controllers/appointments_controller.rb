@@ -56,22 +56,34 @@ class AppointmentsController < ApplicationController
       redirect_to signin_users_path
     end
 
-    new_appointmt = appointment_params
-    @appointmt = Appointment.find_by(id: params[:id])
-    if(@appointmt.user_name != session[:username] && session[:usertype] != 1)
-      redirect_to appointments_path
-    end
+    case request.method_symbol
+    when :get
+      return
+    when :post
+      new_appointmt = appointment_params
+            @appointmt = Appointment.find_by(id: params[:id])
+      if(@appointmt.user_name != session[:username] && session[:usertype] != 1)
+        redirect_to appointments_path
+        return
+      end
 
-    if(new_appointmt[:timeslot] != nil)
-      @appointmt.update_attributes!(timeslot: new_appointmt[:timeslot])
-    end
-    if(new_appointmt[:phone] != nil)
-      @appointmt.update_attributes!(user_tele: new_appointmt[:phone])
-    end
-    if(new_appointmt[:email] != nil)
-      @appointmt.update_attributes!(user_email: new_appointmt[:email])
-    end
+      if(new_appointmt["appt_date(1i)"] != nil)
+        new_appointmt[:appt_date] = Date.new(new_appointmt["appt_date(1i)"].to_i,
+					new_appointmt["appt_date(2i)"].to_i,
+					new_appointmt["appt_date(3i)"].to_i)
+        @appointmt.update_attributes!(appt_date: new_appointmt[:appt_date])
+      end
 
+      if(new_appointmt[:timeslot] != nil)
+        @appointmt.update_attributes!(timeslot: new_appointmt[:timeslot])
+      end
+      if(new_appointmt[:phone] != nil)
+        @appointmt.update_attributes!(user_tele: new_appointmt[:phone])
+      end
+      if(new_appointmt[:email] != nil)
+        @appointmt.update_attributes!(user_email: new_appointmt[:email])
+      end
+    end
   end
 
   def drop
