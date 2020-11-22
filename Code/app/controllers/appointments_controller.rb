@@ -61,7 +61,7 @@ class AppointmentsController < ApplicationController
       return
     when :post
       new_appointmt = appointment_params
-            @appointmt = Appointment.find_by(id: params[:id])
+            @appointmt = Appointment.find_by(id: params.require(:appointments)[:id])
       if(@appointmt.user_name != session[:username] && session[:usertype] != 1)
         redirect_to appointments_path
         return
