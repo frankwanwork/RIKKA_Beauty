@@ -46,6 +46,15 @@
     <br> <br><br> <br>
    
 
+    <h2> Search by appointment date: </h2>
+    <%= form_tag(appointments_path, method: :get) do %>
+        <%= date_select(:appt_date2, params[:appt_date2]) %>
+        <%= date_select(:appt_date1, params[:appt_date1]) %>
+        <%= submit_tag ("Search") %>
+    <% end %>
+
+
+
   <table width="90%" border="1" class="t1">
     <thead>
         <th width="10%"> ID </th>
