@@ -75,8 +75,9 @@ class AppointmentsController < ApplicationController
   end
 
   def drop
-    if session[:usertype] != 1
+    if session[:username] == nil
       redirect_to signin_users_path
+      return
     end
 
     @appointmt = Appointment.find_by(id: params[:id])
