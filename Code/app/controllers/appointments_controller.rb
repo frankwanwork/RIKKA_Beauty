@@ -85,6 +85,8 @@ class AppointmentsController < ApplicationController
       Appointment.destroy(params[:id])
     end
 
+    redirect_to appointments_path
+
   end
 
 end
