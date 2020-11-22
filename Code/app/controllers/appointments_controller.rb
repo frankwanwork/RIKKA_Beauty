@@ -79,5 +79,11 @@ class AppointmentsController < ApplicationController
       redirect_to signin_users_path
     end
 
+    @appointmt = Appointment.find_by(id: params[:id])
+    if(@appointmt.user_name == session[:username] || session[:usertype] == 1)
+      Appointment.destroy(params[:id])
+    end
+
   end
+
 end
