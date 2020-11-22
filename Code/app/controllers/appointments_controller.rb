@@ -83,6 +83,8 @@ class AppointmentsController < ApplicationController
       if(new_appointmt[:email] != nil)
         @appointmt.update_attributes!(user_email: new_appointmt[:email])
       end
+
+      redirect_to appointments_path
     end
   end
 
