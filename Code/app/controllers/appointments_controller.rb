@@ -23,14 +23,14 @@ class AppointmentsController < ApplicationController
     #  params[:timeslot2] = "23:00"
     #end
     when :post
-      start_date= Date.new(params["appt_date2"]["(1i)"].to_i,
+      @start_date= Date.new(params["appt_date2"]["(1i)"].to_i,
 				params["appt_date2"]["(2i)"].to_i,
 				params["appt_date2"]["(3i)"].to_i)
-      end_date = Date.new(params["appt_date1"]["(1i)"].to_i,
+      @end_date = Date.new(params["appt_date1"]["(1i)"].to_i,
 				params["appt_date1"]["(2i)"].to_i,
 				params["appt_date1"]["(3i)"].to_i)
  
-      @appointments = Appointment.search(start_date, end_date, params[:timeslot1], params[:timeslot2])
+      @appointments = Appointment.search(@start_date, @end_date, params[:timeslot1], params[:timeslot2])
       return
     end
   end
