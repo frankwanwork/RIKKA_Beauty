@@ -47,7 +47,7 @@
    
 
     <h2> Search by appointment date: </h2>
-    <%= form_tag(appointments_path, method: :get) do %>
+    <%= form_tag(appointments_path, method: :post) do %>
         <%= date_select(:appt_date2, params[:appt_date2]) %>
         <%= date_select(:appt_date1, params[:appt_date1]) %>
         <%= submit_tag ("Search") %>
