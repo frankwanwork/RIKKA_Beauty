@@ -50,6 +50,8 @@
     <%= form_tag(appointments_path, method: :post) do %>
         <%= date_select(:appt_date2, params[:appt_date2]) %>
         <%= date_select(:appt_date1, params[:appt_date1]) %>
+        <%= select_tag(:timeslot1,options_for_select(['10:00','14:00','16:00'], params[:timeslot1])) %>
+        <%= select_tag(:timeslot2, options_for_select(['10:00','14:00','16:00'], params[:timeslot2])) %>
         <%= submit_tag ("Search") %>
     <% end %>
 
