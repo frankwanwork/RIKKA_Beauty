@@ -40,6 +40,7 @@ class AppointmentsController < ApplicationController
 
     end
   end
+end
 
   def add
     if session[:username] == nil

@@ -20,12 +20,9 @@ module NavigationHelpers
     when /^the (Rikka )?edit\s?page$/ then '/product/edit'
     when /^the (Rikka )?product\s?page$/ then '/product/show'
     when /^the (Rikka )?default\s?page$/ then '/'
-    # when /^the movies page$/ then '/movies'
-    # Add more mappings here.
-    # Here is an example that pulls values out of the Regexp:
-    #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
+    
+    when /^the (Rikka )?appointments\s?page$/ then '/appointments/show'
+    when /^the (Rikka )?delete\s?page$/ then '/appointments/drop?id=16'
 
     else
       begin

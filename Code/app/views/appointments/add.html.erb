@@ -49,19 +49,20 @@
       <%= form_for:appointments, url: add_appointments_path do |f| %>
       <p>
         <%= f.label :Appointment_Time %><br>
-        <%= f.date_select :appt_date %><br>
+        <%= f.date_select :appt_date , {:prompt => true, :order => [:year, :month, :day]} %><br>
+        
       </p>
       <p>
         <%= f.label :TimeSlot %><br>
-        <%= f.select :timeslot, [ '10:00','14:00','16:00' ], :prompt => 'Select One' %>
+        <%= f.select :timeslot , [ '10:00','14:00','16:00' ], :prompt => 'Select One', id:"Time_Slot" %>
       </p>
       <p>
         <%= f.label :Phone_Number %><br>
-        <%= f.text_field :user_tele %>
+        <%= f.text_field :user_tele, id:"phone number" %>
       </p>      
       <p>
         <%= f.label :Email %><br>
-        <%= f.text_field  :user_email %>
+        <%= f.text_field  :user_email, id:"email" %>
       </p> <br>
       <p>
         <%= f.submit "Submit"%>
