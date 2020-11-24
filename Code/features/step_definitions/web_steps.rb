@@ -89,3 +89,15 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
     assert page.has_content?(text)
   end
 end
+
+When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
+    select value, from: field
+end
+
+When /^I confirm popup$/ do
+  page.driver.browser.switch_to.alert.accept    
+end
+
+When /^I clear cookies$/ do
+  Capybara.reset_sessions!
+end

@@ -6,6 +6,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: ec2-user 
   password: rikka
+  # template: template0
   
 development:
   <<: *default

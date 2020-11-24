@@ -14,3 +14,13 @@ end
 And /^(?:|I )attach "([^"]*)" to "([^"]*)"$/ do |field, file|
     page.attach_file field, File.join(Rails.root, file)
 end
+
+
+Given /^a valid admin user$/ do
+  @user = User.create!({
+             :username => "admin",
+             :password => "pass",
+             :user_type => "1"
+           })
+end
+

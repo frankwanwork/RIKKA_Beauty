@@ -44,7 +44,8 @@ class AppointmentsController < ApplicationController
       return
 
     end
-  end
+  # end
+end
 
   def add
     if session[:username] == nil
@@ -120,5 +121,4 @@ class AppointmentsController < ApplicationController
     redirect_to appointments_path
 
   end
-
 end
