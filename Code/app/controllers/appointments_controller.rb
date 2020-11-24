@@ -96,7 +96,7 @@ end
       if(new_appointmt[:timeslot] != nil)
         @appointmt.update_attributes!(timeslot: new_appointmt[:timeslot])
       end
-      if(new_appointmt[:user_tele != nil)
+      if(new_appointmt[:user_tele] != nil)
         @appointmt.update_attributes!(user_tele: new_appointmt[:user_tele])
       end
       if(new_appointmt[:user_email] != nil)
