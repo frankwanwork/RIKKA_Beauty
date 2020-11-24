@@ -31,7 +31,7 @@ class AppointmentsController < ApplicationController
 				params["appt_date1"]["(2i)"].to_i,
 				params["appt_date1"]["(3i)"].to_i)
  
-      if(@start_date.nil || @end_date.nil || params[:timeslot1].nil || params[:timeslot2].nil)
+      if(@start_date.nil? || @end_date.nil? || params[:timeslot1].nil? || params[:timeslot2].nil?)
         @appointments = Appointment.all
       else
         @appointments = Appointment.search(@start_date, @end_date, params[:timeslot1], params[:timeslot2])
