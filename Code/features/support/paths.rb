@@ -22,7 +22,11 @@ module NavigationHelpers
     when /^the (Rikka )?default\s?page$/ then '/'
     
     when /^the (Rikka )?appointments\s?page$/ then '/appointments/show'
-    when /^the (Rikka )?delete\s?page$/ then '/appointments/drop?id=16'
+    when /^the (Rikka )?appointments drop\s?page$/ then '/appointments/drop'
+    when /^the (Rikka )?appointments edit\s?page$/ then '/appointments/edit'
+    when /^the (Rikka )?appointments add\s?page$/ then '/appointments/add'
+      
+    when /^the (Rikka )?delete\s?page$/ then '/appointments/drop?id=70'
 
     else
       begin
