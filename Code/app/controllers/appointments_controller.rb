@@ -96,11 +96,11 @@ end
       if(new_appointmt[:timeslot] != nil)
         @appointmt.update_attributes!(timeslot: new_appointmt[:timeslot])
       end
-      if(new_appointmt[:phone] != nil)
-        @appointmt.update_attributes!(user_tele: new_appointmt[:phone])
+      if(new_appointmt[:user_tele != nil)
+        @appointmt.update_attributes!(user_tele: new_appointmt[:user_tele])
       end
-      if(new_appointmt[:email] != nil)
-        @appointmt.update_attributes!(user_email: new_appointmt[:email])
+      if(new_appointmt[:user_email] != nil)
+        @appointmt.update_attributes!(user_email: new_appointmt[:user_email])
       end
 
       redirect_to appointments_path
