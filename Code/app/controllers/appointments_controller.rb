@@ -23,7 +23,7 @@ class AppointmentsController < ApplicationController
     #  params[:timeslot2] = "23:00"
     #end
     when :post
-      if(params["appt_date2"]["(1i)"])
+      #if(params["appt_date2"]["(1i)"])
       @start_date= Date.new(params["appt_date2"]["(1i)"].to_i,
 				params["appt_date2"]["(2i)"].to_i,
 				params["appt_date2"]["(3i)"].to_i)
