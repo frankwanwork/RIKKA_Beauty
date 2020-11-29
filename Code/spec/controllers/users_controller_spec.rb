@@ -12,9 +12,20 @@ RSpec.describe UsersController, type: :controller do
     # end
   end
   
-  # describe 'new' do
-  #   it 'initilize a new user' do
-  #     expect {post :new}.to change { User.count }.by(1)
+  describe "GET #signup_show" do
+    it "returns http success" do
+      get :signup_show
+      expect(response).to have_http_status(:success)
+    end
+  end
+  
+  # describe "GET #signup" do
+  #   let!(:user1) { User.create(username: 'new-user', password: 'rikka', email: 'email_1_@gmail.com', user_type:1)}
+  #   # params = {:email=>"1445", :username=>"aaa", :password=>"bbb", format: :json}
+  #   it "returns http success" do
+  #     params = {:user=>user1}
+  #     get :signup, params
+  #     expect(response).to have_http_status(:success)
   #   end
   # end
   
