@@ -24,12 +24,12 @@ class AppointmentsController < ApplicationController
     #end
     when :post
       begin
-        @start_date= Date.new(params["appt_date2"]["(1i)"].to_i,
-				params["appt_date2"]["(2i)"].to_i,
-				params["appt_date2"]["(3i)"].to_i)
-        @end_date = Date.new(params["appt_date1"]["(1i)"].to_i,
-				params["appt_date1"]["(2i)"].to_i,
-				params["appt_date1"]["(3i)"].to_i)
+        @start_date= Date.new(params["appt_date2_1"].to_i,
+				params["appt_date2_2"].to_i,
+				params["appt_date2_3"].to_i)
+        @end_date = Date.new(params["appt_date1_1"].to_i,
+				params["appt_date1_2"].to_i,
+				params["appt_date1_3"].to_i)
       rescue StandardError => e
         puts e
         @appointments = Appointment.all
