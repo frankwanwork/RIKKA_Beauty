@@ -41,14 +41,16 @@
     </header>
     
     <br>
-    <h1>Products Gallery</h1>   
-    <li><%= link_to 'Add New', add_product_index_path %></li>  
-    <li><%= link_to 'Edit', edit_product_index_path %></li>   <br> <br> 
+    <h1>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Products Gallery</h1>   
+    <li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= link_to 'Add New', add_product_index_path %></li>  
+    <li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= link_to 'Edit', edit_product_index_path %></li>   <br> <br> 
    
 
   
-    <h2> Search by product name: </h2>
+    <h2>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Search by product name: </h2>
     <%= form_tag(product_index_path, method: :get) do %>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     
+    
         <%= text_field_tag(:product_name, params[:product_name]) %>
         <%= submit_tag ("Search") %>
     <% end %>
@@ -80,68 +82,4 @@
   </table>
 
    
-   
-   
-   
-<!--    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--    <%= image_tag '0283.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--    <%= image_tag '0294.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--    <%= image_tag '0295.jpg', width: '400px' %> &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--    <%= image_tag '0514.jpg', width: '400px' %> <br>  -->
-
-<!--    <ul>-->
-<!--        <li>-->
-<!--        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--        Product 1    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp -->
-<!--        Product 2    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--        Product 3    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--        Product 4-->
-<!--        </li>-->
-<!--        <li>-->
-<!--        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--        Price: $15    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp -->
-<!--        Price: $10    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp-->
-<!--        Price: $20     &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp -->
-<!--        Price: $15 -->
-<!--        </li>-->
-<!--        <li>-->
-<!--        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp -->
-<!--        Description: French Tip &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--        Description: Almond  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp -->
-<!--        Description: Stiletto &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--        Description: Oval-->
-<!--        </li>-->
-<!--    </ul>-->
-
-<!--<br>-->
-<!--<p class="p1">  New Products </p> <br><br>-->
-
-<!--  <% @products.each do |product| %>-->
-<!--    <tr>-->
-<!--      &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--      <td><%=  image_tag product.pics, width:'400px' %> <br>-->
-<!--      <ul>-->
-<!--          <li>-->
-<!--              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--              <td><%= product.productname %> </td>-->
-<!--          </li>-->
-<!--          <li>-->
-<!--              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--              Price: $-->
-<!--              <td><%= product.price %> </td>-->
-              
-<!--          </li>  -->
-          <!--<p>-->
-              <!--Tags:  product.tag_list -->
-          <!--</p>-->
-<!--          <li>-->
-<!--              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-->
-<!--              Description: -->
-<!--              <td><%= product.description %> </td>-->
-<!--          </li>-->
-<!--      </ul>-->
-<!--    </tr>-->
-<!--  <% end %>  -->
-    
-<!--</body>-->
-
+  

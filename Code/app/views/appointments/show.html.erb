@@ -41,20 +41,29 @@
     </header>
     
     <br> <br>
-    <li><%= link_to 'Make Appointment', add_appointments_path %></li> 
-    <li><%= link_to 'Edit Appointment', edit_appointments_path %></li>
+    <li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= link_to 'Make Appointment', add_appointments_path %></li> 
+    <li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <%= link_to 'Edit Appointment', edit_appointments_path %></li>
     <br> <br><br> <br>
    
 
-    <h2> Search by appointment date: </h2>
+
+
+
+<h2> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Search by appointment date: </h2>
+
     <%= form_tag(appointments_path, method: :post) do %>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp <%= " Data from " %>
         <%= date_select(:appt_date2, params[:appt_date2]) %>
+        &nbsp &nbsp <%= " Data to " %>
         <%= date_select(:appt_date1, params[:appt_date1]) %>
+        &nbsp &nbsp <%= " Time from " %>
         <%= select_tag(:timeslot1,options_for_select(['10:00','14:00','16:00'], params[:timeslot1])) %>
+        &nbsp &nbsp <%= " Time To " %>
         <%= select_tag(:timeslot2, options_for_select(['10:00','14:00','16:00'], params[:timeslot2])) %>
-        <%= submit_tag ("Search") %>
+        &nbsp &nbsp &nbsp <%= submit_tag ("Search") %>
     <% end %>
 
+<br>
 
 
   <table width="90%" border="1" class="t1">
