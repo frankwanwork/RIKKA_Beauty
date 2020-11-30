@@ -51,11 +51,23 @@
 
 <h2> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Search by appointment date: </h2>
 
-    <%= form_tag(appointments_path, method: :post) do %>
-        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp <%= " Data from " %>
-        <%= date_select(:appt_date2, params[:appt_date2]) %>
-        &nbsp &nbsp <%= " Data to " %>
-        <%= date_select(:appt_date1, params[:appt_date1]) %>
+    <%= form_tag(appointments_path, method: :post) do |f|%>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp 
+        
+        &nbsp &nbsp <%= " Data from " %>
+        <%= select_tag(:appt_date2_1,options_for_select(['2020','2021','2022'], params[:appt_date2_1])) %>
+        <%= select_tag(:appt_date2_2,options_for_select(['1','2','3','4','5','6','7','8','9','10','11','12'], params[:appt_date2_2])) %>
+        <%= select_tag(:appt_date2_3,options_for_select(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15',
+        '16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'], params[:appt_date2_3])) %>
+
+
+        &nbsp &nbsp <%= " Data To " %>
+        <%= select_tag(:appt_date2_1,options_for_select(['2020','2021','2022'], params[:appt_date2_1])) %>
+        <%= select_tag(:appt_date2_2,options_for_select(['1','2','3','4','5','6','7','8','9','10','11','12'], params[:appt_date2_2])) %>
+        <%= select_tag(:appt_date2_3,options_for_select(['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15',
+        '16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'], params[:appt_date2_3])) %>
+        
+
         &nbsp &nbsp <%= " Time from " %>
         <%= select_tag(:timeslot1,options_for_select(['10:00','14:00','16:00'], params[:timeslot1])) %>
         &nbsp &nbsp <%= " Time To " %>
